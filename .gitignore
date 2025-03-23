@@ -1,0 +1,33 @@
+# === DEPENDENCIES ===
+/node_modules
+/client/node_modules
+/server/node_modules
+
+/.pnp
+.pnp.js
+
+# === TESTING ===
+/coverage
+
+# === BUILD OUTPUT ===
+/build
+/client/build
+/server/dist
+
+# === ENV FILES ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/server/.env
+/client/.env
+
+# === LOG FILES ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === OS / MISC ===
+.DS_Store
+Thumbs.db
