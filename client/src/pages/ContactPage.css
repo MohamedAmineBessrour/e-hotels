@@ -1,0 +1,120 @@
+.contact-page {
+    font-family: "Helvetica", sans-serif;
+  }
+  
+  .hero-section-contact {
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-title-box {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .contact-title-box h1 {
+    font-size: 2.2rem;
+    color: #007ACC;
+    margin: 0;
+  }
+  
+  .contact-content {
+    padding: 60px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+  }
+  
+  .description {
+    font-style: italic;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+  
+  .contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-info {
+    flex: 1 1 300px;
+    font-style: italic;
+    color: #333;
+  }
+  
+  .contact-info h2 {
+    color: #007ACC;
+    margin: 10px 0;
+  }
+  
+  .divider {
+    width: 30px;
+    height: 2px;
+    background-color: #007ACC;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form {
+    flex: 1 1 500px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-style: italic;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 2px solid #007ACC;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .full {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007ACC;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .map-wrapper {
+    width: 100%;
+  }
+  

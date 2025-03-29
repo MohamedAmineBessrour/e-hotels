@@ -1,0 +1,215 @@
+/* ====== Navbar ====== */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: transparent;
+  z-index: 10;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.logo-icon {
+  font-size: 30px;
+}
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.login-icon {
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ====== Page Container ====== */
+.home-container {
+  font-family: 'Helvetica', sans-serif;
+  color: #333;
+}
+
+/* ====== Booking Panel ====== */
+.booking-panel {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  flex: 1 1 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.search-btn,
+.chat-btn {
+  padding: 10px 20px;
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ====== Welcome Section ====== */
+.welcome-section {
+  padding: 100px 30px;
+  text-align: center;
+  background-color: #eaf4fb;
+  color: #0066cc;
+}
+
+.welcome-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.welcome-section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* ====== Cards ====== */
+.info-cards {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 30px 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  color: #007ACC;
+  margin-bottom: 10px;
+}
+
+.card-divider {
+  width: 30px;
+  height: 2px;
+  background-color: #007ACC;
+  margin: 10px auto;
+}
+
+.info-card a {
+  color: #007ACC;
+  text-decoration: none;
+}
+
+/* ====== Footer ====== */
+.footer {
+  background-color: #a6d5f7;
+  color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-box {
+  margin: 10px;
+}
+
+.footer-heading {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-highlight {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.social-icons i {
+  margin: 0 8px;
+  font-size: 20px;
+}
