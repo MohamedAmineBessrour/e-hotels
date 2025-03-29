@@ -12,20 +12,16 @@ JOIN Room r ON h.Hotel_ID = r.Hotel_ID
 GROUP BY h.Hotel_ID, h.Address
 ORDER BY average_price DESC;
 
--- QUERY 3: Nested Query - Hotels with More Rooms Than the Average
+-- QUERY 3: Nested Query - List Hotels where all rooms are cheaper than the average room price across all hotels
 SELECT h.Hotel_ID, h.Address
 FROM Hotel h
-WHERE (
-    SELECT COUNT(*)
+WHERE NOT EXISTS (
+    SELECT 1
     FROM Room r
     WHERE r.Hotel_ID = h.Hotel_ID
-) > (
-    SELECT AVG(room_count)
-    FROM (
-        SELECT COUNT(*) AS room_count
-        FROM Room
-        GROUP BY Hotel_ID
-    ) AS hotel_room_counts
+    AND r.Price > (
+        SELECT AVG(Price) FROM Room
+    )
 );
 
 -- QUERY 4: List All Available Rooms in an Area With Their Amenities (generalized)

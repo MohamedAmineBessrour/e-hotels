@@ -1,11 +1,11 @@
 -- Hotel Chain: LuxuryStay
 INSERT INTO Hotel_Chain (Hotel_Chain_ID, Name, Number_Of_Hotels) VALUES (1, 'LuxuryStay', 14);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-173-840-4928x19236', 1, NULL);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-173-840-4928', 1, NULL);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('simsralph@brown.info', 1, NULL);
 INSERT INTO Office (Office_ID, Hotel_Chain_ID, Address) VALUES (1, 1, '6023 Luis Springs, North Evanview, KY 34819');
 -- Hotel #1 in Houston, area: ['Downtown', 'Midtown', 'Museum District', 'Montrose']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (1, 1, '28719 Holder Stravenue Suite 159, Downtown, Houston', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-501-152-7568x0219', NULL, 1);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-501-152-7568', NULL, 1);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('angelathompson@grant.com', NULL, 1);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 1, 1, 210, 'Sea View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 1, 2, 186, 'Sea View', FALSE, FALSE);
@@ -14,7 +14,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 1, 5, 296, 'Mountain View', TRUE, TRUE);
 -- Hotel #2 in Los Angeles, area: ['Hollywood', 'Downtown', 'Santa Monica', 'Beverly Hills']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (2, 1, '30825 Smith Mountain, Hollywood, Los Angeles', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('590.789.5517x008', NULL, 2);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('590.789.5517', NULL, 2);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('charlesjones@hernandez.org', NULL, 2);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 2, 1, 120, 'Sea View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 2, 2, 224, 'Mountain View', FALSE, TRUE);
@@ -23,7 +23,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 2, 5, 292, 'Mountain View', FALSE, FALSE);
 -- Hotel #3 in San Francisco, area: ['Mission', 'SoMa', 'Chinatown', 'Nob Hill']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (3, 1, '52376 Campbell Drives, Mission, San Francisco', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-604-760-6827x299', NULL, 3);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-604-760-6827', NULL, 3);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('courtney93@anderson.com', NULL, 3);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 3, 1, 201, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 3, 2, 233, 'Sea View', TRUE, TRUE);
@@ -32,7 +32,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 3, 5, 131, 'Sea View', TRUE, TRUE);
 -- Hotel #4 in Chicago, area: ['Loop', 'River North', 'Lincoln Park', 'Hyde Park']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (4, 1, '9191 Debra Isle, Loop, Chicago', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('376.388.2197x11634', NULL, 4);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('376.388.2197', NULL, 4);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('hbowen@guzman-knight.com', NULL, 4);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 4, 1, 128, 'Mountain View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 4, 2, 234, 'Mountain View', FALSE, TRUE);
@@ -50,7 +50,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 5, 5, 225, 'Sea View', TRUE, FALSE);
 -- Hotel #6 in Vancouver, area: ['Gastown', 'Downtown', 'Kitsilano', 'Richmond']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (6, 1, '44831 Rojas Square Suite 394, Gastown, Vancouver', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-240-677-0869x63315', NULL, 6);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-240-677-0869', NULL, 6);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('jeromemartin@hayes.com', NULL, 6);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 6, 1, 206, 'Sea View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 6, 2, 181, 'Mountain View', FALSE, TRUE);
@@ -68,7 +68,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 7, 5, 312, 'Sea View', TRUE, FALSE);
 -- Hotel #8 in Washington DC, area: ['Georgetown', 'Dupont Circle', 'Capitol Hill', 'Adams Morgan']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (8, 1, '552 Martinez Street Apt. 832, Georgetown, Washington DC', 5);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-927-382-9058x0661', NULL, 8);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-927-382-9058', NULL, 8);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('robin10@hartman.com', NULL, 8);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 8, 1, 204, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 8, 2, 205, 'Sea View', TRUE, FALSE);
@@ -77,7 +77,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 8, 5, 158, 'Sea View', FALSE, FALSE);
 -- Hotel #9 in Seattle, area: ['Downtown', 'Capitol Hill', 'Ballard', 'Fremont']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (9, 1, '2971 Byrd Summit, Downtown, Seattle', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('195-886-9066x56413', NULL, 9);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('195-886-9066', NULL, 9);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('amandalittle@reynolds.net', NULL, 9);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 9, 1, 114, 'Mountain View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 9, 2, 183, 'Mountain View', TRUE, FALSE);
@@ -86,7 +86,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 9, 5, 174, 'Mountain View', TRUE, TRUE);
 -- Hotel #10 in Miami, area: ['South Beach', 'Downtown', 'Wynwood', 'Brickell']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (10, 1, '6662 Kevin Station, South Beach, Miami', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('985-642-9727x03723', NULL, 10);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('985-642-9727', NULL, 10);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('fgonzalez@walters-vaughan.com', NULL, 10);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 10, 1, 235, 'Mountain View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 10, 2, 140, 'Mountain View', TRUE, FALSE);
@@ -113,7 +113,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 12, 5, 171, 'Sea View', TRUE, TRUE);
 -- Hotel #13 in New York, area: Bronx
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (13, 1, '3956 Jordan Summit, Bronx, New York', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('973-273-5119x70378', NULL, 13);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('973-273-5119', NULL, 13);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('abaker@martinez.biz', NULL, 13);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 13, 1, 206, 'Sea View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 13, 2, 112, 'Sea View', TRUE, TRUE);
@@ -131,7 +131,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 14, 5, 176, 'Sea View', TRUE, TRUE);
 -- Hotel Chain: BudgetInn
 INSERT INTO Hotel_Chain (Hotel_Chain_ID, Name, Number_Of_Hotels) VALUES (2, 'BudgetInn', 14);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(566)019-0111x16049', 2, NULL);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(566)019-0111', 2, NULL);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('qking@kennedy.info', 2, NULL);
 INSERT INTO Office (Office_ID, Hotel_Chain_ID, Address) VALUES (2, 2, '832 Mullins Loaf, Kelleyhaven, VA 58388');
 -- Hotel #15 in Toronto, area: ['Downtown', 'North York', 'Scarborough', 'Etobicoke']
@@ -172,7 +172,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 18, 5, 118, 'Mountain View', FALSE, TRUE);
 -- Hotel #19 in Washington DC, area: ['Georgetown', 'Dupont Circle', 'Capitol Hill', 'Adams Morgan']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (19, 2, '29193 Gomez Ville, Georgetown, Washington DC', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(646)720-4557x70777', NULL, 19);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(646)720-4557', NULL, 19);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('josephhoward@carr-kaiser.org', NULL, 19);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 19, 1, 274, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 19, 2, 166, 'Mountain View', FALSE, FALSE);
@@ -181,7 +181,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 19, 5, 143, 'Mountain View', TRUE, TRUE);
 -- Hotel #20 in Houston, area: ['Downtown', 'Midtown', 'Museum District', 'Montrose']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (20, 2, '8961 Pearson Mountain, Downtown, Houston', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('026.219.9237x52611', NULL, 20);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('026.219.9237', NULL, 20);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('finleymegan@miller.org', NULL, 20);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 20, 1, 226, 'Sea View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 20, 2, 102, 'Mountain View', FALSE, FALSE);
@@ -199,7 +199,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 21, 5, 239, 'Sea View', TRUE, TRUE);
 -- Hotel #22 in New York, area: ['Manhattan', 'Brooklyn', 'Queens', 'Bronx']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (22, 2, '8512 Eric Trail, Manhattan, New York', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-768-697-7317x7608', NULL, 22);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-768-697-7317', NULL, 22);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('allison74@harris-turner.com', NULL, 22);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 22, 1, 150, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 22, 2, 129, 'Sea View', FALSE, FALSE);
@@ -235,7 +235,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 25, 5, 266, 'Sea View', FALSE, TRUE);
 -- Hotel #26 in Miami, area: ['South Beach', 'Downtown', 'Wynwood', 'Brickell']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (26, 2, '042 Christian Springs Apt. 194, South Beach, Miami', 5);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-012-378-1266x0295', NULL, 26);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-012-378-1266', NULL, 26);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('rsharp@patterson.com', NULL, 26);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 26, 1, 178, 'Sea View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 26, 2, 281, 'Mountain View', TRUE, TRUE);
@@ -244,7 +244,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 26, 5, 154, 'Mountain View', TRUE, TRUE);
 -- Hotel #27 in Seattle, area: Capitol Hill
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (27, 2, '0303 Gordon Cliff Apt. 692, Capitol Hill, Seattle', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-662-313-0293x3628', NULL, 27);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-662-313-0293', NULL, 27);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('perezkrystal@wilson.net', NULL, 27);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 27, 1, 292, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 27, 2, 238, 'Mountain View', FALSE, FALSE);
@@ -262,12 +262,12 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 28, 5, 179, 'Mountain View', FALSE, TRUE);
 -- Hotel Chain: EcoHotels
 INSERT INTO Hotel_Chain (Hotel_Chain_ID, Name, Number_Of_Hotels) VALUES (3, 'EcoHotels', 14);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-517-607-5013x2524', 3, NULL);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-517-607-5013', 3, NULL);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('smallkristen@schultz.com', 3, NULL);
 INSERT INTO Office (Office_ID, Hotel_Chain_ID, Address) VALUES (3, 3, '102 Jonathan Streets Apt. 631, Jerryview, IA 84883');
 -- Hotel #29 in Ottawa, area: ['ByWard Market', 'Centretown', 'Glebe', 'Kanata']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (29, 3, '2799 Livingston Prairie, ByWard Market, Ottawa', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-043-083-3175x077', NULL, 29);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-043-083-3175', NULL, 29);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('rpeterson@jackson-andrade.info', NULL, 29);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 29, 1, 125, 'Mountain View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 29, 2, 298, 'Mountain View', FALSE, FALSE);
@@ -276,7 +276,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 29, 5, 252, 'Mountain View', TRUE, TRUE);
 -- Hotel #30 in Chicago, area: ['Loop', 'River North', 'Lincoln Park', 'Hyde Park']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (30, 3, '766 Richard Stream Suite 035, Loop, Chicago', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('852-328-9257x47288', NULL, 30);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('852-328-9257', NULL, 30);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('ibradley@young.biz', NULL, 30);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 30, 1, 255, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 30, 2, 279, 'Mountain View', FALSE, TRUE);
@@ -285,7 +285,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 30, 5, 274, 'Mountain View', TRUE, FALSE);
 -- Hotel #31 in Vancouver, area: ['Gastown', 'Downtown', 'Kitsilano', 'Richmond']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (31, 3, '464 Christina Fork Suite 900, Gastown, Vancouver', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('349.984.5010x9878', NULL, 31);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('349.984.5010', NULL, 31);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('yortiz@miles.com', NULL, 31);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 31, 1, 244, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 31, 2, 150, 'Mountain View', TRUE, FALSE);
@@ -294,7 +294,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 31, 5, 195, 'Mountain View', TRUE, FALSE);
 -- Hotel #32 in Washington DC, area: ['Georgetown', 'Dupont Circle', 'Capitol Hill', 'Adams Morgan']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (32, 3, '69488 Candice Valleys, Georgetown, Washington DC', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('140.935.6060x31993', NULL, 32);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('140.935.6060', NULL, 32);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('eric22@lambert.com', NULL, 32);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 32, 1, 170, 'Sea View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 32, 2, 107, 'Mountain View', TRUE, TRUE);
@@ -312,7 +312,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 33, 5, 282, 'Mountain View', FALSE, TRUE);
 -- Hotel #34 in Toronto, area: ['Downtown', 'North York', 'Scarborough', 'Etobicoke']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (34, 3, '171 Green Mountain Suite 371, Downtown, Toronto', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-628-505-5749x28811', NULL, 34);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-628-505-5749', NULL, 34);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('kbarron@perez.com', NULL, 34);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 34, 1, 243, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 34, 2, 111, 'Sea View', FALSE, FALSE);
@@ -321,7 +321,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 34, 5, 203, 'Mountain View', FALSE, TRUE);
 -- Hotel #35 in San Francisco, area: ['Mission', 'SoMa', 'Chinatown', 'Nob Hill']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (35, 3, '35020 Wright Ville Suite 222, Mission, San Francisco', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('056-761-0875x91047', NULL, 35);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('056-761-0875', NULL, 35);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('elizabeth40@johnson.com', NULL, 35);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 35, 1, 165, 'Mountain View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 35, 2, 200, 'Sea View', FALSE, FALSE);
@@ -330,7 +330,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 35, 5, 300, 'Sea View', TRUE, TRUE);
 -- Hotel #36 in New York, area: ['Manhattan', 'Brooklyn', 'Queens', 'Bronx']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (36, 3, '17749 Paula Union, Manhattan, New York', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('744-882-4364x751', NULL, 36);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('744-882-4364', NULL, 36);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('samantharobertson@douglas.com', NULL, 36);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 36, 1, 169, 'Mountain View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 36, 2, 241, 'Mountain View', TRUE, FALSE);
@@ -339,7 +339,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 36, 5, 124, 'Mountain View', TRUE, FALSE);
 -- Hotel #37 in Montreal, area: ['Old Montreal', 'Plateau', 'Downtown', 'Griffintown']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (37, 3, '8802 Johnson Street Suite 980, Old Montreal, Montreal', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-235-404-6641x4025', NULL, 37);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-235-404-6641', NULL, 37);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('smithadam@robertson-taylor.biz', NULL, 37);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 37, 1, 180, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 37, 2, 129, 'Mountain View', TRUE, FALSE);
@@ -357,7 +357,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 38, 5, 135, 'Sea View', TRUE, FALSE);
 -- Hotel #39 in Houston, area: ['Downtown', 'Midtown', 'Museum District', 'Montrose']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (39, 3, '3046 Christina Gardens, Downtown, Houston', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('389-223-5019x29349', NULL, 39);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('389-223-5019', NULL, 39);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('qhendrix@hall.com', NULL, 39);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 39, 1, 229, 'Sea View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 39, 2, 147, 'Mountain View', TRUE, FALSE);
@@ -366,7 +366,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 39, 5, 127, 'Mountain View', TRUE, FALSE);
 -- Hotel #40 in Boston, area: ['Back Bay', 'Beacon Hill', 'Cambridge', 'Charlestown']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (40, 3, '43452 Roberto Views Apt. 150, Back Bay, Boston', 5);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(784)743-9397x191', NULL, 40);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(784)743-9397', NULL, 40);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('ndecker@taylor.org', NULL, 40);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 40, 1, 110, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 40, 2, 205, 'Mountain View', TRUE, TRUE);
@@ -384,7 +384,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 41, 5, 225, 'Sea View', TRUE, TRUE);
 -- Hotel #42 in New York, area: Manhattan
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (42, 3, '85468 Charles Manor, Manhattan, New York', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(710)299-2728x8868', NULL, 42);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(710)299-2728', NULL, 42);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('estevens@wright.com', NULL, 42);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 42, 1, 302, 'Sea View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 42, 2, 297, 'Sea View', FALSE, FALSE);
@@ -393,12 +393,12 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 42, 5, 306, 'Sea View', FALSE, TRUE);
 -- Hotel Chain: UrbanRetreat
 INSERT INTO Hotel_Chain (Hotel_Chain_ID, Name, Number_Of_Hotels) VALUES (4, 'UrbanRetreat', 14);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('045.061.0693x65358', 4, NULL);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('045.061.0693', 4, NULL);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('brennansamantha@smith-rogers.biz', 4, NULL);
 INSERT INTO Office (Office_ID, Hotel_Chain_ID, Address) VALUES (4, 4, '07774 Darius Harbors, Lake Jordantown, WI 90638');
 -- Hotel #43 in Seattle, area: ['Downtown', 'Capitol Hill', 'Ballard', 'Fremont']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (43, 4, '845 Perry Trafficway, Downtown, Seattle', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-852-747-0387x654', NULL, 43);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-852-747-0387', NULL, 43);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('matthew88@hardy.com', NULL, 43);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 43, 1, 284, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 43, 2, 225, 'Sea View', TRUE, TRUE);
@@ -407,7 +407,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 43, 5, 139, 'Mountain View', TRUE, TRUE);
 -- Hotel #44 in Boston, area: ['Back Bay', 'Beacon Hill', 'Cambridge', 'Charlestown']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (44, 4, '29556 David Locks Apt. 285, Back Bay, Boston', 5);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('369.229.7146x1830', NULL, 44);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('369.229.7146', NULL, 44);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('wardteresa@perez.com', NULL, 44);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 44, 1, 184, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 44, 2, 216, 'Sea View', TRUE, TRUE);
@@ -425,7 +425,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 45, 5, 298, 'Mountain View', FALSE, TRUE);
 -- Hotel #46 in Chicago, area: ['Loop', 'River North', 'Lincoln Park', 'Hyde Park']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (46, 4, '8237 Solomon Mountain, Loop, Chicago', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-230-068-8119x001', NULL, 46);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-230-068-8119', NULL, 46);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('nmitchell@castro-rice.info', NULL, 46);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 46, 1, 222, 'Mountain View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 46, 2, 193, 'Mountain View', FALSE, TRUE);
@@ -434,7 +434,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 46, 5, 177, 'Sea View', FALSE, FALSE);
 -- Hotel #47 in Miami, area: ['South Beach', 'Downtown', 'Wynwood', 'Brickell']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (47, 4, '0867 Richard Plains, South Beach, Miami', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('836.845.6856x94879', NULL, 47);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('836.845.6856', NULL, 47);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('hendersonmatthew@lee.org', NULL, 47);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 47, 1, 210, 'Sea View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 47, 2, 123, 'Mountain View', TRUE, FALSE);
@@ -452,7 +452,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 48, 5, 119, 'Mountain View', TRUE, TRUE);
 -- Hotel #49 in Washington DC, area: ['Georgetown', 'Dupont Circle', 'Capitol Hill', 'Adams Morgan']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (49, 4, '4848 Kenneth Harbor Suite 939, Georgetown, Washington DC', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-245-679-3530x2030', NULL, 49);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-245-679-3530', NULL, 49);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('christopher14@price.com', NULL, 49);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 49, 1, 201, 'Mountain View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 49, 2, 104, 'Sea View', TRUE, TRUE);
@@ -470,7 +470,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 50, 5, 215, 'Sea View', FALSE, TRUE);
 -- Hotel #51 in Houston, area: ['Downtown', 'Midtown', 'Museum District', 'Montrose']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (51, 4, '1426 Michelle Alley Suite 270, Downtown, Houston', 5);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-007-784-6883x8109', NULL, 51);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-007-784-6883', NULL, 51);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('david48@carter-barr.com', NULL, 51);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 51, 1, 265, 'Mountain View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 51, 2, 112, 'Sea View', TRUE, TRUE);
@@ -479,7 +479,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 51, 5, 299, 'Sea View', FALSE, TRUE);
 -- Hotel #52 in Toronto, area: ['Downtown', 'North York', 'Scarborough', 'Etobicoke']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (52, 4, '20444 Stephens Dale Suite 172, Downtown, Toronto', 5);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('024.174.8264x391', NULL, 52);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('024.174.8264', NULL, 52);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('jcollier@tanner.net', NULL, 52);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 52, 1, 96, 'Sea View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 52, 2, 233, 'Mountain View', TRUE, TRUE);
@@ -497,7 +497,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 53, 5, 248, 'Mountain View', TRUE, FALSE);
 -- Hotel #54 in Los Angeles, area: ['Hollywood', 'Downtown', 'Santa Monica', 'Beverly Hills']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (54, 4, '814 Hebert Drives, Hollywood, Los Angeles', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(393)221-0560x419', NULL, 54);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('(393)221-0560', NULL, 54);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('adamfloyd@odonnell.info', NULL, 54);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 54, 1, 120, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 54, 2, 205, 'Sea View', TRUE, TRUE);
@@ -506,7 +506,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 54, 5, 172, 'Mountain View', FALSE, TRUE);
 -- Hotel #55 in Boston, area: Beacon Hill
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (55, 4, '0681 Wilson Avenue Suite 248, Beacon Hill, Boston', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('628.255.3420x9478', NULL, 55);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('628.255.3420', NULL, 55);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('jamesdavis@reed.biz', NULL, 55);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 55, 1, 202, 'Mountain View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 55, 2, 248, 'Mountain View', TRUE, FALSE);
@@ -529,7 +529,7 @@ INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('ashley74@williams.n
 INSERT INTO Office (Office_ID, Hotel_Chain_ID, Address) VALUES (5, 5, '64486 Ford Via, East Joshua, CO 23376');
 -- Hotel #57 in Miami, area: ['South Beach', 'Downtown', 'Wynwood', 'Brickell']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (57, 5, '1803 Samuel Roads, South Beach, Miami', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-739-255-0673x92608', NULL, 57);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-739-255-0673', NULL, 57);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('yphelps@jones.org', NULL, 57);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 57, 1, 252, 'Sea View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 57, 2, 264, 'Sea View', FALSE, TRUE);
@@ -538,7 +538,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 57, 5, 217, 'Sea View', TRUE, FALSE);
 -- Hotel #58 in Boston, area: ['Back Bay', 'Beacon Hill', 'Cambridge', 'Charlestown']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (58, 5, '53406 Martin Islands, Back Bay, Boston', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-325-378-1985x0394', NULL, 58);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('+1-325-378-1985', NULL, 58);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('brendadavis@bond.com', NULL, 58);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 58, 1, 129, 'Mountain View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 58, 2, 298, 'Sea View', TRUE, FALSE);
@@ -547,7 +547,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 58, 5, 192, 'Mountain View', FALSE, FALSE);
 -- Hotel #59 in Ottawa, area: ['ByWard Market', 'Centretown', 'Glebe', 'Kanata']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (59, 5, '724 James Passage Suite 621, ByWard Market, Ottawa', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('697.503.8730x1457', NULL, 59);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('697.503.8730', NULL, 59);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('muellerpamela@thomas.com', NULL, 59);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 59, 1, 178, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 59, 2, 147, 'Mountain View', FALSE, TRUE);
@@ -574,7 +574,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 61, 5, 242, 'Mountain View', TRUE, FALSE);
 -- Hotel #62 in Seattle, area: ['Downtown', 'Capitol Hill', 'Ballard', 'Fremont']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (62, 5, '199 Gregory Unions, Downtown, Seattle', 2);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('684.301.4176x676', NULL, 62);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('684.301.4176', NULL, 62);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('courtneycastillo@hood-martinez.net', NULL, 62);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 62, 1, 178, 'Mountain View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 62, 2, 305, 'Sea View', TRUE, TRUE);
@@ -583,7 +583,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 62, 5, 146, 'Sea View', FALSE, TRUE);
 -- Hotel #63 in New York, area: ['Manhattan', 'Brooklyn', 'Queens', 'Bronx']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (63, 5, '760 Ford Fork Suite 625, Manhattan, New York', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('755.392.5102x3557', NULL, 63);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('755.392.5102', NULL, 63);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('bobbyirwin@diaz-johnson.net', NULL, 63);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 63, 1, 211, 'Mountain View', TRUE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 63, 2, 219, 'Mountain View', FALSE, FALSE);
@@ -592,7 +592,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 63, 5, 190, 'Mountain View', FALSE, TRUE);
 -- Hotel #64 in Calgary, area: ['Downtown', 'Beltline', 'Bridgeland', 'Inglewood']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (64, 5, '950 Bennett Mountains Suite 119, Downtown, Calgary', 1);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('956.055.8165x35483', NULL, 64);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('956.055.8165', NULL, 64);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('sosacaitlin@friedman.com', NULL, 64);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 64, 1, 105, 'Mountain View', TRUE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 64, 2, 193, 'Sea View', FALSE, TRUE);
@@ -601,7 +601,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 64, 5, 292, 'Sea View', TRUE, TRUE);
 -- Hotel #65 in Washington DC, area: ['Georgetown', 'Dupont Circle', 'Capitol Hill', 'Adams Morgan']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (65, 5, '554 Ann Expressway Apt. 667, Georgetown, Washington DC', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-155-299-2345x002', NULL, 65);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('001-155-299-2345', NULL, 65);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('crystal37@reeves-kennedy.com', NULL, 65);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 65, 1, 108, 'Mountain View', FALSE, FALSE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 65, 2, 260, 'Sea View', TRUE, TRUE);
@@ -610,7 +610,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 65, 5, 274, 'Mountain View', FALSE, FALSE);
 -- Hotel #66 in Los Angeles, area: ['Hollywood', 'Downtown', 'Santa Monica', 'Beverly Hills']
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (66, 5, '72013 Alexandra Flats Apt. 356, Hollywood, Los Angeles', 4);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('999-885-0370x62518', NULL, 66);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('999-885-0370', NULL, 66);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('melody87@frank.com', NULL, 66);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 66, 1, 128, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 66, 2, 198, 'Sea View', FALSE, TRUE);
@@ -646,7 +646,7 @@ INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availabilit
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (5, 69, 5, 190, 'Sea View', TRUE, TRUE);
 -- Hotel #70 in Toronto, area: Downtown
 INSERT INTO Hotel (Hotel_ID, Hotel_Chain_ID, Address, Star_Rating) VALUES (70, 5, '59554 Cooke Union, Downtown, Toronto', 3);
-INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('800.620.0279x4510', NULL, 70);
+INSERT INTO Phone_Number (Phone_Number, Hotel_Chain_ID, Hotel_ID) VALUES ('800.620.0279', NULL, 70);
 INSERT INTO Email (Email, Hotel_Chain_ID, Hotel_ID) VALUES ('dcrane@beard.biz', NULL, 70);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (1, 70, 1, 122, 'Mountain View', FALSE, TRUE);
 INSERT INTO Room (Room_Number, Hotel_ID, Capacity, Price, View_Type, Availability, Is_Extendable) VALUES (2, 70, 2, 163, 'Mountain View', FALSE, FALSE);
@@ -1003,143 +1003,78 @@ INSERT INTO Amenity (Room_Number, Hotel_ID, Type) VALUES (2, 70, ARRAY['Wi-Fi', 
 INSERT INTO Amenity (Room_Number, Hotel_ID, Type) VALUES (3, 70, ARRAY['Air Conditioning', 'Heater', 'Microwave', 'Fridge', 'Wi-Fi']);
 INSERT INTO Amenity (Room_Number, Hotel_ID, Type) VALUES (4, 70, ARRAY['Wi-Fi', 'Coffee Maker', 'Heater', 'TV']);
 INSERT INTO Amenity (Room_Number, Hotel_ID, Type) VALUES (5, 70, ARRAY['Heater', 'Coffee Maker', 'Wi-Fi', 'TV']);
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (1, 1, '134-67-7728', 37, 'Mallory Williams', '9925 Solis Vista Suite 288, East Michelle, PA 41540');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (2, 2, '872-42-6220', 28, 'Victor Howell', '0774 Craig Common Suite 403, West Brittanyborough, OR 82495');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (3, 3, '123-66-1769', 45, 'Michael Baker', '787 Davis Station Apt. 376, Lake Anna, TX 30572');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (4, 4, '748-11-6353', 38, 'Jason Wilson', 'Unit 1629 Box 5951, DPO AP 30584');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (5, 5, '203-13-3617', 39, 'Carlos Johns', '67713 Lee Court Apt. 494, West Brandon, RI 29760');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (6, 6, '810-17-8669', 31, 'Cynthia Morris', '31216 Roberts Lodge, South Anthonyburgh, MD 38539');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (7, 7, '667-44-6345', 59, 'Jonathan Smith', 'USNV Miller, FPO AE 90098');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (8, 8, '294-96-9358', 28, 'David Carter', '0896 Savage Road, Webbbury, KY 09191');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (9, 9, '594-70-4302', 44, 'Deborah Santana', '10217 Bradley Oval, Angelafort, MD 11702');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (10, 10, '891-45-1523', 46, 'Justin Wallace', '75786 Gates Mission, Charlesfurt, WA 14322');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (11, 11, '360-81-0383', 49, 'Charles Griffin', '6652 Kristy Ramp, New Shawnbury, DC 53684');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (12, 12, '027-36-6843', 41, 'Lori Hoffman', 'Unit 3168 Box 1572, DPO AP 13330');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (13, 13, '668-76-7254', 27, 'Anthony Howell', '527 Taylor Ranch Apt. 103, Ryanland, OK 30740');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (14, 14, '073-94-1604', 28, 'Ryan Scott', '2933 Destiny Mission Suite 630, Martinfurt, TX 42352');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (15, 15, '492-95-8107', 36, 'Emily Rogers', '6298 Davis Curve, East Shelby, OR 11417');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (16, 16, '847-08-1724', 36, 'Joe Vaughn MD', '6001 John Bridge, North Taylorland, WA 94162');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (17, 17, '850-45-9819', 64, 'Amy Woods', '2757 Garcia Streets Suite 398, Danielfurt, DC 60979');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (18, 18, '078-42-4011', 65, 'Bridget Stanley', '34683 Shaw Islands Suite 351, Lake Michael, NC 07246');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (19, 19, '169-68-9918', 24, 'Jennifer Garcia', '07718 Baldwin Terrace, Thompsonburgh, ME 87250');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (20, 20, '687-97-4973', 57, 'Robert Sullivan', '241 Angela Union Suite 178, Brooksshire, AR 63314');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (21, 21, '071-70-4573', 41, 'Mark Johnson', '7457 Krista Curve, Timmouth, MD 81168');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (22, 22, '539-68-5339', 39, 'Melissa Jones', '317 Vega Spring Apt. 290, West Michael, NE 27984');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (23, 23, '207-70-4799', 48, 'Sara Lee', '02512 Doyle Point, East Kellyfort, NC 26554');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (24, 24, '057-16-7549', 51, 'Mrs. Morgan Guzman', '162 Garcia View, South Nicole, DE 14516');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (25, 25, '247-90-6881', 65, 'Maria Vargas', '73128 Eric Drive, South Elizabeth, TX 21871');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (26, 26, '328-55-2622', 47, 'Christina Butler', '89925 Brown Vista Apt. 100, South Joshuashire, NC 14448');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (27, 27, '697-77-2353', 58, 'Steven Howard', '218 Lori Flats, Scottville, RI 84901');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (28, 28, '473-50-9346', 25, 'John Buchanan', '2865 Cody Light Suite 370, East Jordan, RI 76362');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (29, 29, '691-55-6681', 56, 'Claudia Ali', '37757 Austin Street, East Joseph, IN 80297');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (30, 30, '456-95-7246', 25, 'Christine Hayes', '42677 Christopher Row Suite 062, Moniquemouth, VA 87153');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (31, 31, '186-16-3805', 52, 'Jeffrey Ramos', '5356 Garrett Harbor Apt. 516, Jasonfort, WI 54316');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (32, 32, '044-52-5523', 47, 'Amanda Medina', '876 Logan Cove, Petersmouth, NC 51046');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (33, 33, '479-99-0799', 61, 'Nathan Davis', '9011 Johnson Center Apt. 913, Lake Ann, MS 40098');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (34, 34, '766-55-2901', 31, 'Derek Grant', '3990 Colon Shoals, New Joshualand, AL 66752');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (35, 35, '896-36-2385', 65, 'Cody Nunez', '15746 Cory Oval, Guzmanmouth, ME 40501');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (36, 36, '596-87-5086', 36, 'Daniel Jensen', 'PSC 2081, Box 8922, APO AP 66155');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (37, 37, '859-53-9882', 51, 'Susan Frazier', '70776 Hayes Pines Suite 793, Cathyland, MT 35927');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (38, 38, '325-11-3755', 41, 'Amy Roberts', '59246 Larry Way, Aarontown, WI 51616');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (39, 39, '529-95-2962', 63, 'Hunter Walker', 'USS Rollins, FPO AE 66809');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (40, 40, '285-54-4332', 22, 'Scott Romero', '764 Tracy Manor Apt. 874, Hawkinsmouth, AL 27154');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (41, 41, '109-61-6010', 41, 'Ian Sanchez', '9599 Davis Skyway Apt. 119, Vickimouth, NE 55933');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (42, 42, '653-61-2056', 32, 'Troy Murray', '928 Ortiz Burg, Stevenbury, UT 49221');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (43, 43, '760-54-6667', 35, 'Patricia West', '0732 Jesse Heights, South Monicaland, WA 67503');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (44, 44, '607-29-4793', 54, 'Tammy Parker', '941 Sean Fall Apt. 717, Port Aaronville, LA 54380');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (45, 45, '510-06-4254', 30, 'Garrett Clarke', '9587 Dennis Parks Suite 301, Thomasfurt, NJ 59161');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (46, 46, '641-92-9490', 34, 'Rebecca Perry', '972 Joel Mountain Apt. 280, East Nathan, TN 04127');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (47, 47, '109-19-5067', 39, 'Tiffany Torres', '279 Thomas Track Suite 728, North Michael, IL 72650');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (48, 48, '305-83-0638', 47, 'Carl Cooley', '531 Selena Alley Suite 960, South Richardport, AR 59117');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (49, 49, '775-35-9664', 55, 'Richard Griffin', '790 John Center, East Amanda, MN 45487');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (50, 50, '464-77-1411', 55, 'Allison Kidd', '88840 Case Inlet, East Sherri, OR 82653');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (51, 51, '210-85-9217', 33, 'David George', '9285 Camacho Islands Suite 405, Lake Brett, NM 36956');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (52, 52, '457-12-3591', 55, 'Diane Olson', '847 Kristina Hill Apt. 685, South Tonyton, NM 81288');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (53, 53, '141-71-0270', 40, 'Heather Walker', '945 Gibson Summit Apt. 996, Stewartport, MN 18493');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (54, 54, '535-99-0195', 38, 'Jennifer Mitchell', '973 Rodriguez Stream, Jonesbury, WY 20097');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (55, 55, '233-19-7806', 28, 'Hector Parker', '88913 Rose Forks, Port Nicolehaven, ME 08498');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (56, 56, '178-83-7555', 48, 'Tyler Johnson', '78661 Jennifer Cape, Lake Matthewstad, CO 38458');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (57, 57, '842-23-8240', 29, 'Laura Harris', '15561 Johnson Mill Apt. 642, West Markchester, IN 03450');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (58, 58, '352-95-7064', 53, 'Alexis Taylor', '6944 Key Curve Apt. 992, Ricetown, ID 34619');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (59, 59, '114-08-1634', 62, 'Tammy Williams', '9167 Melissa Manor Apt. 228, New Tammytown, MO 54168');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (60, 60, '161-18-6520', 47, 'James Smith', '250 Lori Locks Apt. 248, New Jesse, OK 38470');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (61, 61, '061-54-1421', 56, 'Taylor Eaton', '08806 Owen Islands, Melissamouth, IN 84547');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (62, 62, '718-10-4911', 28, 'Christina Simmons', '4335 Kaitlyn Square Suite 688, South Katiestad, DC 37986');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (63, 63, '465-71-5322', 29, 'Veronica Gallagher', '299 Wayne Summit Apt. 809, Tammybury, GA 66971');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (64, 64, '490-15-9121', 48, 'Shelby Webb', '276 Sabrina Bypass Suite 639, Chandlermouth, WI 01018');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (65, 65, '251-92-1529', 45, 'Ryan Silva', '3679 Johnson Camp, Annville, OK 21463');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (66, 66, '531-40-7536', 34, 'Kevin Gutierrez', '34341 Wilcox Ranch, South Juliestad, MA 82208');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (67, 67, '041-74-9195', 44, 'Angela Brown', '125 Frazier Villages Suite 281, Mortontown, MO 97276');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (68, 68, '110-99-0361', 64, 'Mrs. Toni Wright', '49957 Isaiah Gateway Suite 843, Frazierfurt, WA 37825');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (69, 69, '231-05-8364', 44, 'Samantha Lynch', '378 Miller Skyway Apt. 605, Thomasburgh, DE 09758');
-INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Full_name, Address) VALUES (70, 70, '197-49-5383', 30, 'Scott Mcbride', '928 Amy Ridges Apt. 990, Jacksonborough, NC 38457');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (1, 'Kristy Oneal', '119-46-9037', 33, '91325 Hector Corners, West Matthew, OK 53993', '4393191058526589587', '2023-05-07');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (2, 'Julie Robinson MD', '474-53-6838', 20, 'Unit 7199 Box 5300, DPO AP 69476', '3595450757677028', '2024-10-08');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (3, 'Timothy Russell', '887-93-9125', 33, '569 Robert Harbor, East Alejandrobury, KY 49729', '4734153750328', '2024-04-21');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (4, 'Eric Moreno', '374-39-0070', 69, '35046 Wood Inlet, Port Deborah, DE 86321', '6011831033749948', '2023-06-14');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (5, 'Austin Burgess', '480-14-5738', 62, '25697 Michael Junction, Morenoville, ME 44305', '4893121242600', '2024-06-25');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (6, 'Christina Garcia', '093-07-3823', 57, 'USNS Hamilton, FPO AA 47331', '4745442021172966', '2023-12-14');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (7, 'Paul Williams', '639-74-0804', 69, '0458 Morse Wells Suite 769, Lake Colleen, FL 68440', '502063469121', '2023-07-11');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (8, 'Carol Graham', '294-72-3487', 29, '7021 Dougherty Lock, North Timothy, OK 38907', '676237245151', '2024-02-10');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (9, 'James Gilbert', '240-12-7890', 23, '6938 Gutierrez Crescent, Gonzalezshire, MS 70454', '2702808147167004', '2024-10-27');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (10, 'Thomas Quinn', '860-06-4235', 38, '13877 Samuel Extension Apt. 463, Mendozahaven, WA 97269', '375533874355107', '2024-07-25');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (11, 'Matthew Armstrong', '687-88-6033', 53, 'USNS Miller, FPO AP 06947', '4089979210095791', '2023-06-21');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (12, 'Andrea Shelton', '768-62-7785', 60, 'PSC 8738, Box 1472, APO AE 84166', '340533817823932', '2024-08-28');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (13, 'Abigail Rich', '378-34-5155', 18, '85643 Robert Manor Apt. 824, Andrewbury, CT 71504', '6597202290455581', '2023-07-07');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (14, 'Patrick Schneider', '702-57-0625', 71, '8665 Herrera Locks Suite 650, North Bruceview, VA 62587', '3527234875405030', '2024-10-20');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (15, 'Rebecca Harrison', '031-51-0716', 51, '5077 Anderson Ranch, New Heidihaven, AZ 40029', '2642360042458024', '2024-12-19');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (16, 'Thomas Moore', '005-31-5905', 68, '439 Brooke Fall, East Jessica, MS 73582', '3556170743299888', '2024-07-20');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (17, 'Jeffrey Andrews', '123-56-3155', 38, '0013 Olson Radial, Robertborough, MN 29372', '502067279245', '2024-01-08');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (18, 'Kathryn Johnston', '714-79-5062', 58, '09608 Macias Avenue Suite 549, Stephanieton, CO 94789', '4432060393957888321', '2023-05-05');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (19, 'Catherine Davis', '160-56-0384', 48, '760 Banks Gardens Apt. 662, Lake Jack, WI 47671', '30380295643001', '2023-11-27');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (20, 'Curtis Harrison', '767-82-2132', 18, '6271 William Estates, Brownport, NH 88208', '3526055314616312', '2025-01-21');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (21, 'Henry Stanley', '615-33-7879', 43, '646 Veronica Rapids Suite 247, Fitzpatrickton, OH 25801', '060417579343', '2025-02-04');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (22, 'Christy Perez', '153-44-8770', 49, '7973 Graham Port, East Jacob, OK 19569', '180084004073801', '2024-03-08');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (23, 'Katherine Kennedy', '583-82-5238', 78, '832 Townsend Gardens Apt. 426, Port Holly, IN 52770', '3580618514738724', '2025-01-03');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (24, 'Holly Wagner', '373-72-5178', 64, '853 Gregory Overpass, Martinezport, PA 17864', '2708982103715777', '2024-10-18');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (25, 'Peter Peterson', '524-56-8721', 55, '3605 West Flat, Lake Andrewfort, AK 27003', '3506722879531962', '2023-04-07');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (26, 'Kimberly Mckinney', '250-40-1267', 59, '2928 York Inlet Apt. 047, West Jessicafort, SC 13061', '3539275139380960', '2023-12-04');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (27, 'April Patrick', '675-12-9900', 25, '09921 Davis Ports Apt. 879, Hahnview, TN 10848', '6011413271270802', '2024-06-20');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (28, 'Sarah Chang', '663-10-8252', 41, '46515 Hancock Land Apt. 852, Sandersfort, NH 55272', '3552343068903624', '2024-07-26');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (29, 'Jose Miller', '334-21-5327', 55, '3602 Swanson Freeway Suite 694, North Alyssa, MA 22411', '060489653752', '2024-01-06');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (30, 'Sarah Meyers', '732-08-9913', 72, '761 Compton Street, West Joelfurt, MD 54471', '4543376877735031884', '2025-03-23');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (31, 'Cassandra Rosario', '789-31-3984', 24, 'Unit 4487 Box 1403, DPO AP 94178', '4955930157182684336', '2024-01-13');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (32, 'Kristin Jones', '203-30-5703', 40, 'Unit 3338 Box 8020, DPO AE 28882', '4555659472270713', '2025-01-11');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (33, 'David Mcguire', '175-13-4193', 50, '2008 Erin Pike, Johnfurt, AK 52510', '4040440839194605185', '2024-10-05');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (34, 'Lisa Kelley', '479-64-9305', 54, '26327 Poole Pine, South Donnaburgh, MT 67083', '30560729129814', '2024-09-19');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (35, 'Tyler Roberts', '623-70-1726', 24, '498 Johnson Flats, West Christopherside, SC 91181', '3588118232415459', '2023-12-07');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (36, 'Anthony Bray', '034-78-5515', 49, 'PSC 0476, Box 1653, APO AA 41064', '213166569867528', '2024-02-06');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (37, 'John Schmidt', '382-80-2998', 62, '910 Victoria Mountain Apt. 156, Greenefurt, VA 22038', '4166231411054', '2023-10-11');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (38, 'Marcus Perry', '060-62-3676', 80, '3839 Green Valley Suite 306, New Jennifer, CT 57081', '4670968891916255', '2023-07-12');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (39, 'Jonathan Wells', '272-45-2764', 61, '158 Brown Island Apt. 528, Lake Richardland, VT 45563', '060493216687', '2024-10-29');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (40, 'Keith Walker', '798-71-2605', 69, '160 Gibbs Park Apt. 511, Oneillchester, MT 18064', '6011189737781422', '2024-10-22');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (41, 'Mary Young', '523-75-7836', 33, '027 Mitchell Vista, East Cynthia, IL 32592', '4538122383966641126', '2025-01-27');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (42, 'Abigail Bradshaw', '134-59-6700', 78, '38476 Newton Junctions, South Keithstad, WY 79707', '676289298413', '2024-09-15');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (43, 'Amy Armstrong', '214-14-1731', 20, '0121 Hopkins Park Suite 942, East Stacey, OK 12520', '370326646954504', '2023-03-28');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (44, 'Gary Kennedy', '069-08-9597', 63, '039 Michele Coves Suite 565, Alisonborough, UT 15060', '30376126424538', '2023-04-10');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (45, 'Elizabeth Grant', '756-30-4616', 52, '22222 Glenn Springs, Amyfort, LA 53806', '4863373406360155', '2023-10-21');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (46, 'Alex Brown', '865-49-9338', 38, '2733 Luke Parkway Apt. 282, Gatesmouth, WI 64386', '375169175593722', '2023-11-29');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (47, 'John Bautista', '718-70-8425', 48, '58252 Williams Throughway, Gonzalezburgh, NV 35373', '3572132715055938', '2024-03-26');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (48, 'Amber Griffin', '634-36-4913', 58, '652 Holmes Corners Apt. 222, Morantown, NY 65924', '30005407298952', '2024-03-13');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (49, 'Julia Bell', '067-91-0350', 36, 'USCGC Smith, FPO AA 17178', '4683512998590238114', '2025-01-09');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (50, 'Kelsey Travis', '186-51-4758', 27, 'USNV Mcneil, FPO AA 73673', '4393163908564464', '2024-05-19');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (51, 'Craig Ward', '896-05-6736', 63, '056 Baird Flat, North Angelaborough, WV 29957', '2261949525554745', '2024-08-24');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (52, 'Angel Marsh', '024-71-8974', 23, '921 Scott Plains, Maldonadochester, HI 14818', '30087259849736', '2023-08-01');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (53, 'Christopher Lang', '590-39-9587', 55, '67481 Alicia Ferry Apt. 350, New Christinefort, MD 45841', '3558828747385106', '2024-03-20');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (54, 'April Fox', '769-21-2510', 72, '3551 Troy Fields, Port Anna, NC 95886', '3597747375117933', '2023-09-11');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (55, 'Robert Kim', '782-50-5313', 74, '1812 Donald Center, West Robert, NH 47904', '30531871626154', '2024-03-11');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (56, 'Joshua Bush', '394-67-6240', 47, 'Unit 1180 Box 6579, DPO AP 95592', '30182096499090', '2023-09-13');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (57, 'Andrew Santos', '252-21-6255', 60, '19863 Zimmerman Way Suite 810, Port Michaelside, MT 65318', '3595777898468887', '2024-10-12');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (58, 'Zachary Brennan', '333-62-9838', 79, 'USCGC Mccarthy, FPO AE 63444', '6011316679239230', '2024-07-15');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (59, 'Matthew Holloway', '162-02-8915', 51, 'PSC 4936, Box 3282, APO AA 41911', '345304851974832', '2025-01-25');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (60, 'Lynn Lane', '111-94-4356', 37, '49569 Brian Prairie Suite 974, North Gerald, OK 10231', '30308790488671', '2024-03-14');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (61, 'Joshua Solis', '652-73-2882', 57, '232 Denise Road, Johnsonberg, TX 23965', '4152368934341351709', '2024-05-11');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (62, 'Shelby Morris', '444-63-5781', 52, '966 Freeman Turnpike Apt. 430, West Paul, MS 68460', '4942575058698005560', '2023-11-22');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (63, 'Vanessa Reed', '770-80-8445', 66, '558 Mccarthy Crossroad, North Meganland, AL 14343', '4420871342179585508', '2024-11-27');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (64, 'Dustin Mitchell', '320-30-2475', 45, 'PSC 6055, Box 7872, APO AA 30531', '4356611602550', '2023-08-02');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (65, 'Patrick Lucas', '453-43-7612', 30, '78102 Miller Pass, Jeromeville, MD 24832', '4316836636262', '2025-02-21');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (66, 'David Davis', '026-67-2185', 68, '82745 Cline Flats, Mooreport, KY 51247', '4027263696722933187', '2023-04-02');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (67, 'Mark Braun', '897-41-9171', 18, 'USS Conner, FPO AP 19033', '30131350792690', '2024-06-01');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (68, 'Barbara Harris', '259-75-7169', 60, '72763 Sarah Path, Matthewborough, WA 12943', '4539447769866547', '2024-05-12');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (69, 'Sarah Lynch', '400-33-7953', 64, '67432 Marks Divide Apt. 586, Ryanport, AK 59035', '30293378967835', '2024-07-27');
-INSERT INTO Customer (Customer_ID, Full_name, SSN, Age, Address, Card, Registration_Date) VALUES (70, 'Andrea Smith', '708-49-1525', 52, '556 Lewis Inlet Apt. 046, Dennisberg, MO 40633', '4713043011448', '2024-06-26');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (1, 1, '134-67-7728', 37, 'Mallory Williams', '9925 Solis Vista Suite 288, East Michelle, PA 41540');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (2, 2, '872-42-6220', 28, 'Victor Howell', '0774 Craig Common Suite 403, West Brittanyborough, OR 82495');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (3, 3, '123-66-1769', 45, 'Michael Baker', '787 Davis Station Apt. 376, Lake Anna, TX 30572');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (4, 4, '748-11-6353', 38, 'Jason Wilson', 'Unit 1629 Box 5951, DPO AP 30584');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (5, 5, '203-13-3617', 39, 'Carlos Johns', '67713 Lee Court Apt. 494, West Brandon, RI 29760');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (6, 6, '810-17-8669', 31, 'Cynthia Morris', '31216 Roberts Lodge, South Anthonyburgh, MD 38539');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (7, 7, '667-44-6345', 59, 'Jonathan Smith', 'USNV Miller, FPO AE 90098');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (8, 8, '294-96-9358', 28, 'David Carter', '0896 Savage Road, Webbbury, KY 09191');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (9, 9, '594-70-4302', 44, 'Deborah Santana', '10217 Bradley Oval, Angelafort, MD 11702');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (10, 10, '891-45-1523', 46, 'Justin Wallace', '75786 Gates Mission, Charlesfurt, WA 14322');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (11, 11, '360-81-0383', 49, 'Charles Griffin', '6652 Kristy Ramp, New Shawnbury, DC 53684');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (12, 12, '027-36-6843', 41, 'Lori Hoffman', 'Unit 3168 Box 1572, DPO AP 13330');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (13, 13, '668-76-7254', 27, 'Anthony Howell', '527 Taylor Ranch Apt. 103, Ryanland, OK 30740');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (14, 14, '073-94-1604', 28, 'Ryan Scott', '2933 Destiny Mission Suite 630, Martinfurt, TX 42352');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (15, 15, '492-95-8107', 36, 'Emily Rogers', '6298 Davis Curve, East Shelby, OR 11417');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (16, 16, '847-08-1724', 36, 'Joe Vaughn MD', '6001 John Bridge, North Taylorland, WA 94162');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (17, 17, '850-45-9819', 64, 'Amy Woods', '2757 Garcia Streets Suite 398, Danielfurt, DC 60979');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (18, 18, '078-42-4011', 65, 'Bridget Stanley', '34683 Shaw Islands Suite 351, Lake Michael, NC 07246');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (19, 19, '169-68-9918', 24, 'Jennifer Garcia', '07718 Baldwin Terrace, Thompsonburgh, ME 87250');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (20, 20, '687-97-4973', 57, 'Robert Sullivan', '241 Angela Union Suite 178, Brooksshire, AR 63314');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (21, 21, '071-70-4573', 41, 'Mark Johnson', '7457 Krista Curve, Timmouth, MD 81168');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (22, 22, '539-68-5339', 39, 'Melissa Jones', '317 Vega Spring Apt. 290, West Michael, NE 27984');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (23, 23, '207-70-4799', 48, 'Sara Lee', '02512 Doyle Point, East Kellyfort, NC 26554');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (24, 24, '057-16-7549', 51, 'Mrs. Morgan Guzman', '162 Garcia View, South Nicole, DE 14516');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (25, 25, '247-90-6881', 65, 'Maria Vargas', '73128 Eric Drive, South Elizabeth, TX 21871');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (26, 26, '328-55-2622', 47, 'Christina Butler', '89925 Brown Vista Apt. 100, South Joshuashire, NC 14448');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (27, 27, '697-77-2353', 58, 'Steven Howard', '218 Lori Flats, Scottville, RI 84901');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (28, 28, '473-50-9346', 25, 'John Buchanan', '2865 Cody Light Suite 370, East Jordan, RI 76362');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (29, 29, '691-55-6681', 56, 'Claudia Ali', '37757 Austin Street, East Joseph, IN 80297');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (30, 30, '456-95-7246', 25, 'Christine Hayes', '42677 Christopher Row Suite 062, Moniquemouth, VA 87153');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (31, 31, '186-16-3805', 52, 'Jeffrey Ramos', '5356 Garrett Harbor Apt. 516, Jasonfort, WI 54316');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (32, 32, '044-52-5523', 47, 'Amanda Medina', '876 Logan Cove, Petersmouth, NC 51046');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (33, 33, '479-99-0799', 61, 'Nathan Davis', '9011 Johnson Center Apt. 913, Lake Ann, MS 40098');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (34, 34, '766-55-2901', 31, 'Derek Grant', '3990 Colon Shoals, New Joshualand, AL 66752');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (35, 35, '896-36-2385', 65, 'Cody Nunez', '15746 Cory Oval, Guzmanmouth, ME 40501');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (36, 36, '596-87-5086', 36, 'Daniel Jensen', 'PSC 2081, Box 8922, APO AP 66155');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (37, 37, '859-53-9882', 51, 'Susan Frazier', '70776 Hayes Pines Suite 793, Cathyland, MT 35927');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (38, 38, '325-11-3755', 41, 'Amy Roberts', '59246 Larry Way, Aarontown, WI 51616');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (39, 39, '529-95-2962', 63, 'Hunter Walker', 'USS Rollins, FPO AE 66809');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (40, 40, '285-54-4332', 22, 'Scott Romero', '764 Tracy Manor Apt. 874, Hawkinsmouth, AL 27154');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (41, 41, '109-61-6010', 41, 'Ian Sanchez', '9599 Davis Skyway Apt. 119, Vickimouth, NE 55933');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (42, 42, '653-61-2056', 32, 'Troy Murray', '928 Ortiz Burg, Stevenbury, UT 49221');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (43, 43, '760-54-6667', 35, 'Patricia West', '0732 Jesse Heights, South Monicaland, WA 67503');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (44, 44, '607-29-4793', 54, 'Tammy Parker', '941 Sean Fall Apt. 717, Port Aaronville, LA 54380');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (45, 45, '510-06-4254', 30, 'Garrett Clarke', '9587 Dennis Parks Suite 301, Thomasfurt, NJ 59161');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (46, 46, '641-92-9490', 34, 'Rebecca Perry', '972 Joel Mountain Apt. 280, East Nathan, TN 04127');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (47, 47, '109-19-5067', 39, 'Tiffany Torres', '279 Thomas Track Suite 728, North Michael, IL 72650');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (48, 48, '305-83-0638', 47, 'Carl Cooley', '531 Selena Alley Suite 960, South Richardport, AR 59117');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (49, 49, '775-35-9664', 55, 'Richard Griffin', '790 John Center, East Amanda, MN 45487');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (50, 50, '464-77-1411', 55, 'Allison Kidd', '88840 Case Inlet, East Sherri, OR 82653');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (51, 51, '210-85-9217', 33, 'David George', '9285 Camacho Islands Suite 405, Lake Brett, NM 36956');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (52, 52, '457-12-3591', 55, 'Diane Olson', '847 Kristina Hill Apt. 685, South Tonyton, NM 81288');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (53, 53, '141-71-0270', 40, 'Heather Walker', '945 Gibson Summit Apt. 996, Stewartport, MN 18493');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (54, 54, '535-99-0195', 38, 'Jennifer Mitchell', '973 Rodriguez Stream, Jonesbury, WY 20097');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (55, 55, '233-19-7806', 28, 'Hector Parker', '88913 Rose Forks, Port Nicolehaven, ME 08498');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (56, 56, '178-83-7555', 48, 'Tyler Johnson', '78661 Jennifer Cape, Lake Matthewstad, CO 38458');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (57, 57, '842-23-8240', 29, 'Laura Harris', '15561 Johnson Mill Apt. 642, West Markchester, IN 03450');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (58, 58, '352-95-7064', 53, 'Alexis Taylor', '6944 Key Curve Apt. 992, Ricetown, ID 34619');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (59, 59, '114-08-1634', 62, 'Tammy Williams', '9167 Melissa Manor Apt. 228, New Tammytown, MO 54168');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (60, 60, '161-18-6520', 47, 'James Smith', '250 Lori Locks Apt. 248, New Jesse, OK 38470');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (61, 61, '061-54-1421', 56, 'Taylor Eaton', '08806 Owen Islands, Melissamouth, IN 84547');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (62, 62, '718-10-4911', 28, 'Christina Simmons', '4335 Kaitlyn Square Suite 688, South Katiestad, DC 37986');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (63, 63, '465-71-5322', 29, 'Veronica Gallagher', '299 Wayne Summit Apt. 809, Tammybury, GA 66971');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (64, 64, '490-15-9121', 48, 'Shelby Webb', '276 Sabrina Bypass Suite 639, Chandlermouth, WI 01018');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (65, 65, '251-92-1529', 45, 'Ryan Silva', '3679 Johnson Camp, Annville, OK 21463');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (66, 66, '531-40-7536', 34, 'Kevin Gutierrez', '34341 Wilcox Ranch, South Juliestad, MA 82208');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (67, 67, '041-74-9195', 44, 'Angela Brown', '125 Frazier Villages Suite 281, Mortontown, MO 97276');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (68, 68, '110-99-0361', 64, 'Mrs. Toni Wright', '49957 Isaiah Gateway Suite 843, Frazierfurt, WA 37825');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (69, 69, '231-05-8364', 44, 'Samantha Lynch', '378 Miller Skyway Apt. 605, Thomasburgh, DE 09758');
+INSERT INTO Employee (Employee_ID, Hotel_ID, SSN, Age, Name, Address) VALUES (70, 70, '197-49-5383', 30, 'Scott Mcbride', '928 Amy Ridges Apt. 990, Jacksonborough, NC 38457');
+INSERT INTO Customer (Customer_ID, Name, SSN, Age, Address, Card_Number, Registration_Date) VALUES (1, 'Kristy Oneal', '119-46-9037', 33, '91325 Hector Corners, West Matthew, OK 53993', '4393191058526589', '2023-05-07');
+INSERT INTO Customer (Customer_ID, Name, SSN, Age, Address, Card_Number, Registration_Date) VALUES (2, 'Julie Robinson MD', '474-53-6838', 20, 'Unit 7199 Box 5300, DPO AP 69476', '3595450757677028', '2024-10-08');
+INSERT INTO Customer (Customer_ID, Name, SSN, Age, Address, Card_Number, Registration_Date) VALUES (3, 'Timothy Russell', '887-93-9125', 33, '569 Robert Harbor, East Alejandrobury, KY 49729', '4734153750328152', '2024-04-21');
+INSERT INTO Customer (Customer_ID, Name, SSN, Age, Address, Card_Number, Registration_Date) VALUES (4, 'Eric Moreno', '374-39-0070', 69, '35046 Wood Inlet, Port Deborah, DE 86321', '6011831033749948', '2023-06-14');
+INSERT INTO Customer (Customer_ID, Name, SSN, Age, Address, Card_Number, Registration_Date) VALUES (5, 'Austin Burgess', '480-14-5738', 62, '25697 Michael Junction, Morenoville, ME 44305', '4893121242600584', '2024-06-25');

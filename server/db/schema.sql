@@ -23,9 +23,9 @@ CREATE TABLE Hotel (
 -- Phone Number Table
 CREATE TABLE Phone_Number (
     Phone_Number VARCHAR(20) NOT NULL,
-    Hotel_Chain_ID INT,
-    Hotel_ID INT,
-    PRIMARY KEY (Phone_Number, Hotel_Chain_ID, Hotel_ID),
+    Hotel_Chain_ID INT NULL,
+    Hotel_ID INT NULL,
+    UNIQUE (Phone_Number, Hotel_Chain_ID, Hotel_ID),
     FOREIGN KEY (Hotel_Chain_ID) REFERENCES Hotel_Chain(Hotel_Chain_ID) ON DELETE CASCADE,
     FOREIGN KEY (Hotel_ID) REFERENCES Hotel(Hotel_ID) ON DELETE CASCADE,
     CHECK (
@@ -38,9 +38,9 @@ CREATE TABLE Phone_Number (
 -- Email Table
 CREATE TABLE Email (
     Email VARCHAR(255) NOT NULL,
-    Hotel_Chain_ID INT,
-    Hotel_ID INT,
-    PRIMARY KEY (Email, Hotel_Chain_ID, Hotel_ID),
+    Hotel_Chain_ID INT NULL,
+    Hotel_ID INT NULL,
+    UNIQUE (Email, Hotel_Chain_ID, Hotel_ID),
     FOREIGN KEY (Hotel_Chain_ID) REFERENCES Hotel_Chain(Hotel_Chain_ID) ON DELETE CASCADE,
     FOREIGN KEY (Hotel_ID) REFERENCES Hotel(Hotel_ID) ON DELETE CASCADE,
     CHECK (
