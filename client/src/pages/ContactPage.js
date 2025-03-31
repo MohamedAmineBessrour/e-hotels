@@ -1,35 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContactPage.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
 export default function ContactPage() {
+  // State for handling the form submission and confirmation message
+  const [submitted, setSubmitted] = useState(false);
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevents page reload on form submission
+    setSubmitted(true);  // Sets the submission state to true, showing the confirmation message
+  };
+
   return (
     <div className="contact-page">
      
-      {/* Hero Section with inline background */}
-      <div
-        className="hero-section"
-        style={{
-          backgroundImage: "url('/img2.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100vh",
-          position: "relative",
-        }}
-      >
-        <div className="contact-header">
-        </div>
-      </div>
-
       {/* Content Section */}
       <div className="contact-content">
         <p>
-          I'm a paragraph. Click here to add your own text and edit me. It’s
-          easy. Just click “Edit Text” or double click me and you can start
-          adding your own content and make changes to the font. I’m a great
-          place for you to tell a story and let your users know a little more
-          about you.
+          Welcome to Seaside B&B, your home away from home. We are a network of
+          five prestigious hotel chains, offering guests the perfect accommodation
+          options across North America. Our goal is to make your stay as comfortable
+          and enjoyable as possible, with rooms available to book in real-time.
+        </p>
+
+        <p>
+          Whether you're traveling for business or pleasure, Seaside B&B offers 
+          a wide range of rooms to suit every need. You can easily book a room 
+          through our online platform, check availability, and enjoy a seamless 
+          check-in experience. If you need any assistance, our dedicated team 
+          is ready to help you with any queries you might have.
         </p>
 
         <div className="contact-container">
@@ -46,35 +47,42 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <form className="contact-form">
-            <div className="form-row">
-              <div>
-                <label>First Name *</label>
-                <input type="text" required />
+          {!submitted ? (
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div>
+                  <label>First Name *</label>
+                  <input type="text" required />
+                </div>
+                <div>
+                  <label>Last Name *</label>
+                  <input type="text" required />
+                </div>
               </div>
-              <div>
-                <label>Last Name *</label>
-                <input type="text" required />
+              <div className="form-row">
+                <div>
+                  <label>Email *</label>
+                  <input type="email" required />
+                </div>
+                <div>
+                  <label>Subject</label>
+                  <input type="text" />
+                </div>
               </div>
+              <div className="form-row">
+                <div style={{ width: "100%" }}>
+                  <label>Message</label>
+                  <textarea rows="5" />
+                </div>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          ) : (
+            <div className="confirmation-message">
+              <h3>Your message has been sent successfully!</h3>
+              <p>Thank you for reaching out to us. We'll get back to you as soon as possible.</p>
             </div>
-            <div className="form-row">
-              <div>
-                <label>Email *</label>
-                <input type="email" required />
-              </div>
-              <div>
-                <label>Subject</label>
-                <input type="text" />
-              </div>
-            </div>
-            <div className="form-row">
-              <div style={{ width: "100%" }}>
-                <label>Message</label>
-                <textarea rows="5" />
-              </div>
-            </div>
-            <button type="submit">Submit</button>
-          </form>
+          )}
         </div>
 
         {/* Map Embed */}
@@ -90,8 +98,6 @@ export default function ContactPage() {
           />
         </div>
       </div>
-
-
     </div>
   );
 }

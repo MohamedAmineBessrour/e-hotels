@@ -7,15 +7,17 @@ const Header = () => {
   return (
     <header className="main-header">
       <div className="logo">
-        <h1>Seaside B&B</h1>
-        <p>San Jose</p>
+        <Link to="/" className="logo-link">Seaside B&B</Link>
+        <p>   </p>
       </div>
       <nav className="nav-links">
-        <Link to="/book">Book a Room</Link>
-        <Link to="/about">About Us</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/contact">Contact</Link>
-        <FaUser className="login-icon" />
+        <ul>
+          <li><Link to="/search">Search Room</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/login">Login</Link></li>
+          <li><FaUser className="login-icon" /></li>
+        </ul>
       </nav>
     </header>
   );
