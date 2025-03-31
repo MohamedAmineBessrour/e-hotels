@@ -28,7 +28,7 @@ const Footer = () => {
 
       <div className="footer-section credits">
         <p>© 2035 by Seaside B&B</p>
-        <p>Powered and secured by <a href="#">Wix</a></p>
+        <p>Powered and secured by <a href="#">uOttawa</a></p>
       </div>
     </footer>
   );
