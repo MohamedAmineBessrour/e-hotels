@@ -3,7 +3,6 @@ import "./HomePage.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
-
 export default function HomePage() {
   return (
     <div className="home-container">
@@ -12,7 +11,7 @@ export default function HomePage() {
       <div
         className="hero-section"
         style={{
-          backgroundImage: "url('/img2.jpeg')",
+          backgroundImage: "url('/mykonos.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100vh",
@@ -46,10 +45,9 @@ export default function HomePage() {
 
       {/* Welcome Section */}
       <div className="welcome-section">
-        <h2>Welcome</h2>
+        <h2>Welcome to Seaside B&B</h2>
         <p>
-          I'm a paragraph. Click here to add your own text and edit me. I’m a great place
-          for you to tell a story and let your users know a little more about you.
+          Seaside B&B brings together five of the most well-known hotel chains across North America, offering a seamless booking experience for guests. Whether you're here for business or leisure, our platform ensures your stay is as comfortable as possible with real-time room availability and personalized services.
         </p>
 
         <div className="info-cards">
@@ -57,8 +55,9 @@ export default function HomePage() {
             <div key={i} className="info-card">
               <h3>{title}</h3>
               <p>
-                I'm a paragraph. Click here to add your own text and edit me.
-                I’m a great place for you to tell a story and let your users know a little more about you.
+                {title === "Activities" && "Discover a wide range of activities at Seaside B&B locations, from outdoor adventures to relaxing spa treatments. There's something for everyone!"}
+                {title === "Rooms" && "Choose from a variety of room types, from cozy single rooms to spacious suites. Each room is designed for comfort and relaxation with modern amenities."}
+                {title === "Location" && "Seaside B&B has locations across North America, offering prime access to some of the most popular tourist destinations. Whether you’re near the beach, city center, or mountains, we’ve got the perfect spot for your getaway."}
               </p>
               <div className="card-divider" />
               <a href="#">Read More</a>
@@ -67,7 +66,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      
     </div>
   );
 }
