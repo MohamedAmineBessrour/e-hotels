@@ -1,14 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import HomePage from "./pages/HomePage";
-import ContactPage from "./pages/ContactPage";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
-import LoginPage from "./pages/LoginPage"; 
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import ViewsPage from "./pages/HotelViewsPage";
+import LoginPage from "./pages/LoginPage";
 import RoomSearch from "./pages/RoomSearch";
 
-import Header from "./pages/Header";
 import Footer from "./pages/Footer";
+import Header from "./pages/Header";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} /> 
         <Route path="/about" element={<AboutPage />} />
         <Route path="/search" element={<RoomSearch />} />
+        <Route path="*" element={<HomePage />} />
+        <Route path="/views" element={<ViewsPage />} />
       </Routes>
 
       <Footer />

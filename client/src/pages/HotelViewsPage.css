@@ -1,0 +1,45 @@
+.hotel-views-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .search-form select, .search-form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    min-width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .result-box, .hotel-list {
+    margin-top: 1.5rem;
+  }
+  
+  .hotel-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hotel-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  

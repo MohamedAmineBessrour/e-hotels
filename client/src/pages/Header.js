@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <nav className="nav-links">
         <ul>
-          <li><Link to="/search">Search Room</Link></li>
+          <li><Link to="/views">Info</Link></li>
           <li><Link to="/about">About Us</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/login">Login</Link></li>

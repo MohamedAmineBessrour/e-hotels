@@ -21,9 +21,11 @@ pool.connect()
 // Routes
 const customerRoutes = require('./routes/customerRoutes');
 const roomRoutes = require('./routes/roomRoutes');
+const viewsRoutes = require('./routes/viewsRoutes'); 
 
 app.use('/api/customers', customerRoutes);
 app.use('/api/rooms', roomRoutes);
+app.use('/api/views', viewsRoutes); 
 
 // Health Check
 app.get('/', (req, res) => {

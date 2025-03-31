@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { loginCustomer, registerCustomer } from "../services/api";
 import "./LoginPage.css";
 
 export default function LoginPage() {
@@ -9,18 +11,30 @@ export default function LoginPage() {
     dob: "",
     address: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    alert(`Logging in with Name: ${formData.name}, SSN: ${formData.ssn}`);
+    try {
+      const res = await loginCustomer({
+        name: formData.name,
+        ssn: formData.ssn,
+      });
+      alert(`✅ Welcome back, ${res.data.name}`);
+      navigate("/search");
+    } catch (err) {
+      console.error(err);
+      alert("❌ Login failed. Please check your credentials.");
+    }
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
+
     const birthYear = new Date(formData.dob).getFullYear();
     const currentYear = new Date().getFullYear();
     const age = currentYear - birthYear;
@@ -30,7 +44,14 @@ export default function LoginPage() {
       return;
     }
 
-    alert("Registration submitted for customer: " + JSON.stringify(formData));
+    try {
+      const res = await registerCustomer(formData); // No card number sent
+      alert(`✅ Registered successfully as ${res.data.name}`);
+      console.log(res.data);
+    } catch (err) {
+      console.error(err);
+      alert("❌ Registration failed. Please try again. Error: " + err.message);
+    }
   };
 
   return (
@@ -57,7 +78,7 @@ export default function LoginPage() {
               name="ssn"
               value={formData.ssn}
               onChange={handleChange}
-              pattern="[0-9\-]{9,20}"
+              pattern="[0-9\\-]{9,20}"
               title="Enter a valid SSN"
               required
             />
