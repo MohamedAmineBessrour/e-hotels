@@ -49,11 +49,11 @@ const HotelViewsPage = () => {
       const availableData = await res1.json();
       console.log("✅ Available Rooms Response:", availableData);
 
-      if (!availableData.length) {
+      if (!availableData || availableData.available_rooms === null) {
         alert(`No available rooms found for ${fullArea}`);
       } else {
-        setAvailableRooms(availableData[0]);
-      }
+        setAvailableRooms(availableData);
+      }      
 
       console.log("🔍 Fetching Hotel Capacity with:", fullArea);
       const res2 = await fetch(`http://localhost:5000/api/views/hotel-capacity?area=${encodeURIComponent(fullArea)}`);

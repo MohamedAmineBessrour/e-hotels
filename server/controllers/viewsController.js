@@ -5,13 +5,13 @@ exports.getAvailableRoomsPerArea = async (req, res) => {
     const { city, area } = req.query;
     const fullArea = `${area}, ${city}`;
     const query = `
-      SELECT Area, Available_Rooms
+      SELECT SUM(Available_Rooms) AS available_rooms
       FROM Available_Rooms_Per_Area
       WHERE Area ILIKE $1
     `;
     const values = [`%${fullArea}%`]; 
     const result = await db.query(query, values);
-    res.json(result.rows);
+    res.json(result.rows[0]);
   } catch (err) {
     console.error("Error fetching available rooms:", err);
     res.status(500).json({ error: "Internal server error" });
