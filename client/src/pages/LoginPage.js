@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 import { loginCustomer, registerCustomer } from "../services/api";
 import "./LoginPage.css";
 
@@ -12,6 +13,7 @@ export default function LoginPage() {
     address: "",
   });
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,13 +26,14 @@ export default function LoginPage() {
         name: formData.name,
         ssn: formData.ssn,
       });
-      alert(`✅ Welcome back, ${res.data.name}`);
+  
+      login(res.data);
       navigate("/search");
     } catch (err) {
       console.error(err);
       alert("❌ Login failed. Please check your credentials.");
     }
-  };
+  };  
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -45,8 +48,10 @@ export default function LoginPage() {
     }
 
     try {
-      const res = await registerCustomer(formData); // No card number sent
+      const res = await registerCustomer(formData);
       alert(`✅ Registered successfully as ${res.data.name}`);
+      login(res.data);
+      navigate("/search");
       console.log(res.data);
     } catch (err) {
       console.error(err);
