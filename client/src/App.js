@@ -10,7 +10,9 @@ import Header from "./pages/Header";
 import HomePage from "./pages/HomePage";
 import ViewsPage from "./pages/HotelViewsPage";
 import LoginPage from "./pages/LoginPage";
+import NotFound from "./pages/NotFoundPage";
 import RoomSearch from "./pages/RoomSearch";
+import Unauthorized from "./pages/UnauthorizedPage";
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Header />
 
         <Routes>
+          {/* Public Pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
@@ -42,8 +45,21 @@ function App() {
             }
           />
 
+          {/* Role-protected (employees only)*/}
+          {/* 
+          <Route
+            path="/employee-dashboard"
+            element={
+              <PrivateRoute requiredRole="employee">
+                <EmployeeDashboard />
+              </PrivateRoute>
+            }
+          /> 
+          */}
+
           {/* 🧭 Fallback */}
-          <Route path="*" element={<HomePage />} />
+          <Route path="/unauthorized" element={<Unauthorized />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />

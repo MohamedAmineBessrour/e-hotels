@@ -3,9 +3,11 @@ const router = express.Router();
 const {
   registerCustomer,
   loginCustomer,
-} = require('../controllers/customerController.js');
+  loginEmployee
+} = require('../controllers/authController.js');
 
 router.post('/register', registerCustomer);
 router.post('/login', loginCustomer);
+router.post('/employee-login', loginEmployee);
 
 module.exports = router;

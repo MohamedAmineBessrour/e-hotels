@@ -10,10 +10,11 @@ export const AuthProvider = ({ children }) => {
     if (savedUser) setUser(JSON.parse(savedUser));
   }, []);
 
-  const login = (userData) => {
-    setUser(userData);
-    localStorage.setItem("user", JSON.stringify(userData));
-  };
+  const login = (userData, role) => {
+    const fullUserData = { ...userData, role };
+    setUser(fullUserData);
+    localStorage.setItem("user", JSON.stringify(fullUserData));
+  };  
 
   const logout = () => {
     setUser(null);

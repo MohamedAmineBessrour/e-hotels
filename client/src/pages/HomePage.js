@@ -1,7 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./HomePage.css";
-import Header from "./Header";
-import Footer from "./Footer";
 
 export default function HomePage() {
   return (
