@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./ContactPage.css";
-import Header from "./Header";
-import Footer from "./Footer";
 
 export default function ContactPage() {
   // State for handling the form submission and confirmation message

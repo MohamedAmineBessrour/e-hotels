@@ -49,7 +49,28 @@ const loginCustomer = async (req, res) => {
   }
 };
 
+const loginEmployee = async (req, res) => {
+  const { name, ssn } = req.body;
+
+  try {
+    const result = await pool.query(
+      `SELECT * FROM Employee WHERE Name = $1 AND SSN = $2`,
+      [name, ssn]
+    );
+
+    if (result.rows.length > 0) {
+      res.status(200).json(result.rows[0]);
+    } else {
+      res.status(401).json({ error: 'Invalid name or SSN' });
+    }
+  } catch (err) {
+    console.error('❌ Employee login failed:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+};
+// Exporting the functions to be used in routes
 module.exports = {
   registerCustomer,
-  loginCustomer
+  loginCustomer,
+  loginEmployee
 };

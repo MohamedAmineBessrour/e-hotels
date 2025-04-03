@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
-import { loginCustomer, registerCustomer } from "../services/api";
+import { loginCustomer, loginEmployee, registerCustomer } from "../services/api";
 import "./LoginPage.css";
 
 export default function LoginPage() {
   const [isRegistering, setIsRegistering] = useState(false);
+  const [userType, setUserType] = useState("customer"); // "customer" or "employee"
   const [formData, setFormData] = useState({
     name: "",
     ssn: "",
@@ -22,18 +23,22 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await loginCustomer({
-        name: formData.name,
-        ssn: formData.ssn,
-      });
-  
-      login(res.data);
-      navigate("/search");
+      let res;
+      if (userType === "customer") {
+        res = await loginCustomer({ name: formData.name, ssn: formData.ssn });
+        login(res.data, userType);
+        navigate("/search");
+      } else {
+        res = await loginEmployee({ name: formData.name, ssn: formData.ssn });
+        login(res.data, userType);
+        navigate("/unauthorized");
+      }
+
     } catch (err) {
       console.error(err);
       alert("❌ Login failed. Please check your credentials.");
     }
-  };  
+  };
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -50,7 +55,7 @@ export default function LoginPage() {
     try {
       const res = await registerCustomer(formData);
       alert(`✅ Registered successfully as ${res.data.name}`);
-      login(res.data);
+      login(res.data, "customer");
       navigate("/search");
       console.log(res.data);
     } catch (err) {
@@ -62,7 +67,18 @@ export default function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-container">
-        <h2>{isRegistering ? "Customer Registration" : "Login"}</h2>
+        <h2>{isRegistering ? "Customer Registration" : `${userType === "employee" ? "Employee" : "Customer"} Login`}</h2>
+
+        {/* 👇 Login/Register Toggle for Employee or Customer */}
+        {!isRegistering && (
+          <div className="form-group">
+            <label>User Type:</label>
+            <select value={userType} onChange={(e) => setUserType(e.target.value)}>
+              <option value="customer">Customer</option>
+              <option value="employee">Employee</option>
+            </select>
+          </div>
+        )}
 
         <form onSubmit={isRegistering ? handleRegister : handleLogin}>
           <div className="form-group">
