@@ -1,18 +1,21 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { AuthProvider } from "./AuthContext";
-import PrivateRoute from "./PrivateRoute";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import Footer from "./pages/Footer";
-import Header from "./pages/Header";
-import HomePage from "./pages/HomePage";
-import ViewsPage from "./pages/HotelViewsPage";
-import LoginPage from "./pages/LoginPage";
-import NotFound from "./pages/NotFoundPage";
-import RoomSearch from "./pages/RoomSearch";
-import Unauthorized from "./pages/UnauthorizedPage";
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { AuthProvider } from './AuthContext';
+import PrivateRoute from './PrivateRoute';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import CustomerProfile from './pages/CustomerProfile';
+import EmployeeDashboard from './pages/EmployeeDashboard';
+import EmployeeProfile from './pages/EmployeeProfile';
+import Footer from './pages/Footer';
+import Header from './pages/Header';
+import HomePage from './pages/HomePage';
+import ViewsPage from './pages/HotelViewsPage';
+import LoginPage from './pages/LoginPage';
+import NotFound from './pages/NotFoundPage';
+import RoomSearch from './pages/RoomSearch';
+import Unauthorized from './pages/UnauthorizedPage';
 
 function App() {
   return (
@@ -44,9 +47,24 @@ function App() {
               </PrivateRoute>
             }
           />
-
+          {/* Role-protected (customers only)*/}
+          <Route
+            path="/customer-profile"
+            element={
+              <PrivateRoute requiredRole="customer">
+                <CustomerProfile />
+              </PrivateRoute>
+            }
+          />
           {/* Role-protected (employees only)*/}
-          {/* 
+          <Route
+            path="/employee-profile"
+            element={
+              <PrivateRoute requiredRole="employee">
+                <EmployeeProfile />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="/employee-dashboard"
             element={
@@ -54,8 +72,7 @@ function App() {
                 <EmployeeDashboard />
               </PrivateRoute>
             }
-          /> 
-          */}
+          />
 
           {/* 🧭 Fallback */}
           <Route path="/unauthorized" element={<Unauthorized />} />

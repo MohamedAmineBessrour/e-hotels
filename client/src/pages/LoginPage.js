@@ -31,7 +31,7 @@ export default function LoginPage() {
       } else {
         res = await loginEmployee({ name: formData.name, ssn: formData.ssn });
         login(res.data, userType);
-        navigate("/unauthorized");
+        navigate("/employee-dashboard");
       }
 
     } catch (err) {

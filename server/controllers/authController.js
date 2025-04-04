@@ -1,5 +1,8 @@
 const pool = require('../db');
 
+// Utility function to normalize SSN
+const normalizeSSN = (ssn) => ssn.replace(/-/g, '').trim();
+
 const registerCustomer = async (req, res) => {
   const { name, ssn, dob, address } = req.body;
 
@@ -12,7 +15,7 @@ const registerCustomer = async (req, res) => {
     return res.status(400).json({ error: 'Invalid age. Must be between 18 and 120.' });
   }
 
-  const placeholderCard = '1111222233334444';
+  const placeholderCard = null;
 
   try {
     const result = await pool.query(
@@ -24,22 +27,30 @@ const registerCustomer = async (req, res) => {
 
     res.status(201).json(result.rows[0]);
   } catch (err) {
+    if (err.code === '23505') { // Unique violation error code
+      return res.status(409).json({ error: 'SSN already registered.' });
+    }
     console.error('❌ Registration failed:', err.message);
     res.status(500).json({ error: err.message });
   }
 };
 
 const loginCustomer = async (req, res) => {
-  const { name, ssn } = req.body;
+  const name = req.body.name;
+  const ssn = normalizeSSN(req.body.ssn);
 
   try {
     const result = await pool.query(
-      `SELECT * FROM Customer WHERE Name = $1 AND SSN = $2`,
-      [name, ssn]
+      `SELECT * FROM Customer WHERE Name = $1`,
+      [name]
     );
 
-    if (result.rows.length > 0) {
-      res.status(200).json(result.rows[0]);
+    const matchedUser = result.rows.find(
+      (row) => normalizeSSN(row.ssn) === ssn
+    );
+
+    if (matchedUser) {
+      res.status(200).json(matchedUser);
     } else {
       res.status(401).json({ error: 'Invalid name or SSN' });
     }
@@ -50,16 +61,21 @@ const loginCustomer = async (req, res) => {
 };
 
 const loginEmployee = async (req, res) => {
-  const { name, ssn } = req.body;
+  const name = req.body.name;
+  const ssn = normalizeSSN(req.body.ssn);
 
   try {
     const result = await pool.query(
-      `SELECT * FROM Employee WHERE Name = $1 AND SSN = $2`,
-      [name, ssn]
+      `SELECT * FROM Employee WHERE Name = $1`,
+      [name]
     );
 
-    if (result.rows.length > 0) {
-      res.status(200).json(result.rows[0]);
+    const matchedEmployee = result.rows.find(
+      (row) => normalizeSSN(row.ssn) === ssn
+    );
+
+    if (matchedEmployee) {
+      res.status(200).json(matchedEmployee);
     } else {
       res.status(401).json({ error: 'Invalid name or SSN' });
     }
