@@ -7,6 +7,7 @@ const cityAreaMap = {
   "San Francisco": ["Mission"],
   "New York": ["Manhattan", "Bronx"],
   Ottawa: ["ByWard Market"],
+  Toronto: ['Downtown'],
   Vancouver: ["Gastown"],
   Calgary: ["Downtown"],
   Montreal: ["Old Montreal"],

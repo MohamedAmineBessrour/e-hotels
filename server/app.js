@@ -21,8 +21,10 @@ pool.connect()
 // Routes
 const authRoutes = require('./routes/authRoutes');
 const roomRoutes = require('./routes/roomRoutes');
-const viewsRoutes = require('./routes/viewsRoutes'); 
+const viewsRoutes = require('./routes/viewsRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
 
+app.use('/api/bookings', bookingRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/views', viewsRoutes); 
