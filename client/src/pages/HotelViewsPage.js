@@ -105,11 +105,11 @@ const HotelViewsPage = () => {
         <div className="hotel-list">
           <h3>Hotels in {area}, {city}</h3>
           <ul>
-            {hotels.map((h, i) => (
-              <li key={i}>
-                Hotel #{h.hotel_id}: {h.total_capacity} total capacity
-              </li>
-            ))}
+          {hotels.map((h, i) => (
+            <li key={i}>
+              🏨 <strong>{h.hotel_chain_name}</strong> (Hotel ID: {h.hotel_id}) – 📍 {h.area} — 🛏️ Capacity: {h.total_capacity}
+            </li>
+          ))}
           </ul>
         </div>
       )}
