@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import ManagePage from "./ManagePage";
 import "./UserProfile.css";
-import ManagePage from "./ManagePage"; 
 
 const EmployeeProfile = () => {
   const [employee, setEmployee] = useState(null);
@@ -14,7 +14,7 @@ const EmployeeProfile = () => {
     const parsedUser = JSON.parse(storedUser);
     const employeeId = parsedUser.employee_id;
 
-    axios.get(`http://localhost:5001/api/employees/${employeeId}`)
+    axios.get(`http://localhost:5000/api/employees/${employeeId}`)
       .then((res) => {
         setEmployee(res.data);
         setLoading(false);
@@ -32,7 +32,7 @@ const EmployeeProfile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:5001/api/employees/${employee.employee_id}`, employee)
+    axios.put(`http://localhost:5000/api/employees/${employee.employee_id}`, employee)
       .then((res) => {
         alert("✅ Profile updated!");
         setEmployee(res.data);

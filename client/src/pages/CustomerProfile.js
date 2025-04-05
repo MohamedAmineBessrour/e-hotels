@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import "./UserProfile.css";
 
 const CustomerProfile = () => {
@@ -14,7 +14,7 @@ const CustomerProfile = () => {
       const parsedUser = JSON.parse(storedUser);
       const customerId = parsedUser.customer_id;
 
-      axios.get(`http://localhost:5001/api/customers/${customerId}`)
+      axios.get(`http://localhost:5000/api/customers/${customerId}`)
         .then((res) => {
           const data = res.data;
           const formattedCustomer = {
@@ -50,7 +50,7 @@ const CustomerProfile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:5001/api/customers/${customer.customer_id}`, customer)
+    axios.put(`http://localhost:5000/api/customers/${customer.customer_id}`, customer)
       .then((res) => {
         alert("✅ Profile updated successfully.");
         const updated = {

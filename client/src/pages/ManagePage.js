@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import axios from 'axios';
+import React, { useState } from 'react';
 import './ManagePage.css';
 
 const ManagePage = () => {
@@ -41,7 +41,7 @@ const ManagePage = () => {
   const handleFindHotel = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`http://localhost:5001/api/manage/hotel/${hotelIdToUpdate}`);
+      const res = await axios.get(`http://localhost:5000/api/manage/hotel/${hotelIdToUpdate}`);
       setHotelInfo(res.data);
     } catch (err) {
       alert("❌ Hotel not found.");
@@ -57,7 +57,7 @@ const ManagePage = () => {
   const handleUpdateHotel = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5001/api/manage/hotel/${hotelIdToUpdate}`, {
+      await axios.put(`http://localhost:5000/api/manage/hotel/${hotelIdToUpdate}`, {
         starRating: hotelInfo.starRating ? Number(hotelInfo.starRating) : null,
         phone: hotelInfo.phone || null,
         email: hotelInfo.email || null
@@ -72,7 +72,7 @@ const ManagePage = () => {
   const handleInsertRoom = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5001/api/manage/room', {
+      await axios.post('http://localhost:5000/api/manage/room', {
         hotelId: Number(insertRoomData.hotelId),
         roomNumber: Number(insertRoomData.roomNumber),
         capacity: Number(insertRoomData.capacity),
@@ -91,7 +91,7 @@ const ManagePage = () => {
   const handleFindRoom = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`http://localhost:5001/api/manage/room/${roomSearch.hotelId}/${roomSearch.roomNumber}`);
+      const res = await axios.get(`http://localhost:5000/api/manage/room/${roomSearch.hotelId}/${roomSearch.roomNumber}`);
       setRoomUpdateInfo(res.data);
     } catch (err) {
       setRoomUpdateInfo(null);
@@ -103,7 +103,7 @@ const ManagePage = () => {
   const handleUpdateRoom = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5001/api/manage/room/${roomSearch.hotelId}/${roomSearch.roomNumber}`, {
+      await axios.put(`http://localhost:5000/api/manage/room/${roomSearch.hotelId}/${roomSearch.roomNumber}`, {
         capacity: Number(roomUpdateInfo.capacity),
         price: Number(roomUpdateInfo.price),
         availability: roomUpdateInfo.availability,
@@ -118,7 +118,7 @@ const ManagePage = () => {
 
   const handleDeleteRoom = async () => {
     try {
-      await axios.delete('http://localhost:5001/api/manage/room', {
+      await axios.delete('http://localhost:5000/api/manage/room', {
         data: {
           hotelId: Number(roomSearch.hotelId),
           roomNumber: Number(roomSearch.roomNumber)
