@@ -27,3 +27,11 @@ export const checkInBooking = async (bookingId) => {
   if (!res.ok) throw new Error('Failed to check in');
   return res.json();
 };
+
+export const registerWalkInCustomer = (customerData) =>
+  API.post('/auth/register', customerData);
+
+export const rentRoom = async (data) => {
+  const res = await axios.post('/api/bookings/renting', data);
+  return res.data;
+};

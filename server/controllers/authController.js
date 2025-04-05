@@ -4,7 +4,7 @@ const pool = require('../db');
 const normalizeSSN = (ssn) => ssn.replace(/-/g, '').trim();
 
 const registerCustomer = async (req, res) => {
-  const { name, ssn, dob, address } = req.body;
+  const { name, ssn, dob, address, card_number, registration_date } = req.body;
 
   // Calculate age from dob
   const birthYear = new Date(dob).getFullYear();
@@ -15,14 +15,15 @@ const registerCustomer = async (req, res) => {
     return res.status(400).json({ error: 'Invalid age. Must be between 18 and 120.' });
   }
 
-  const placeholderCard = null;
+  const card = card_number || null;
+  const registrationDate = registration_date || new Date().toISOString().split('T')[0];
 
   try {
     const result = await pool.query(
       `INSERT INTO Customer (Name, SSN, Address, Age, Card_Number, Registration_Date)
-       VALUES ($1, $2, $3, $4, $5, CURRENT_DATE)
+       VALUES ($1, $2, $3, $4, $5, $6)
        RETURNING *`,
-      [name, ssn, address, age, placeholderCard]
+      [name, ssn, address, age, card, registrationDate]
     );
 
     res.status(201).json(result.rows[0]);

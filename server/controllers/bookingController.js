@@ -79,4 +79,45 @@ const checkInBooking = async (req, res) => {
   }
 };
 
-module.exports = { getAllBookings, checkInBooking };
+const insertRenting = async (req, res) => {
+  const { customerId, hotelId, roomNumber, startDate, endDate } = req.body;
+
+  try {
+    // 1. Check if the room exists and is available
+    const roomResult = await pool.query(
+      `SELECT Price, Availability FROM Room WHERE Hotel_ID = $1 AND Room_Number = $2`,
+      [hotelId, roomNumber]
+    );
+
+    if (roomResult.rows.length === 0) {
+      return res.status(404).json({ error: 'Room not found' });
+    }
+
+    const room = roomResult.rows[0];
+    if (!room.availability) {
+      return res.status(400).json({ error: 'Room is not available for rent' });
+    }
+
+    const price = room.price;
+
+    // 2. Insert renting entry
+    const rentingRes = await pool.query(
+      `INSERT INTO Renting (Customer_ID, Hotel_ID, Room_Number, Start_Date, End_Date, Price)
+       VALUES ($1, $2, $3, $4, $5, $6)
+       RETURNING *`,
+      [customerId, hotelId, roomNumber, startDate, endDate, price]
+    );
+
+    // 3. Set room as unavailable
+    await pool.query(
+      `UPDATE Room SET Availability = FALSE WHERE Hotel_ID = $1 AND Room_Number = $2`,
+      [hotelId, roomNumber]
+    );
+
+    res.status(201).json({ message: '✅ Room rented successfully', renting: rentingRes.rows[0] });
+  } catch (err) {
+    console.error('❌ Failed to insert renting:', err.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+module.exports = { getAllBookings, checkInBooking, insertRenting };
