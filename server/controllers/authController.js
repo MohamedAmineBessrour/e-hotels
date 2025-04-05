@@ -42,7 +42,7 @@ const loginCustomer = async (req, res) => {
 
   try {
     const result = await pool.query(
-      `SELECT * FROM Customer WHERE Name = $1`,
+      `SELECT * FROM Customer WHERE LOWER(Name) = LOWER($1)`,
       [name]
     );
 
@@ -67,7 +67,7 @@ const loginEmployee = async (req, res) => {
 
   try {
     const result = await pool.query(
-      `SELECT * FROM Employee WHERE Name = $1`,
+      `SELECT * FROM Employee WHERE LOWER(Name) = LOWER($1)`,
       [name]
     );
 
