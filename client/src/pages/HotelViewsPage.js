@@ -4,17 +4,18 @@ import "./HotelViewsPage.css";
 const cityAreaMap = {
   Houston: ["Downtown", "Midtown", "Museum District", "Montrose"],
   "Los Angeles": ["Hollywood", "Downtown", "Santa Monica", "Beverly Hills"],
-  "San Francisco": ["Mission"],
-  "New York": ["Manhattan", "Bronx"],
-  Ottawa: ["ByWard Market"],
-  Vancouver: ["Gastown"],
-  Calgary: ["Downtown"],
-  Montreal: ["Old Montreal"],
-  Seattle: ["Downtown", "Capitol Hill"],
-  Boston: ["Back Bay", "Beacon Hill"],
-  Miami: ["South Beach"],
-  Chicago: ["Loop"],
-  "Washington DC": ["Georgetown"],
+  "San Francisco": ['Mission', 'SoMa', 'Chinatown', 'Nob Hill'],
+  "New York": ['Manhattan', 'Brooklyn', 'Queens', 'Bronx'],
+  Ottawa: ['ByWard Market', 'Centretown', 'Glebe', 'Kanata'],
+  Toronto: ['Downtown', 'North York', 'Scarborough', 'Etobicoke'],
+  Vancouver: ['Gastown', 'Downtown', 'Kitsilano', 'Richmond'],
+  Calgary: ['Downtown', 'Beltline', 'Bridgeland', 'Inglewood'],
+  Montreal: ['Old Montreal', 'Plateau', 'Downtown', 'Griffintown'],
+  Seattle: ['Downtown', 'Capitol Hill', 'Ballard', 'Fremont'],
+  Boston: ['Back Bay', 'Beacon Hill', 'Cambridge', 'Charlestown'],
+  Miami: ['South Beach', 'Downtown', 'Wynwood', 'Brickell'],
+  Chicago: ['Loop', 'River North', 'Lincoln Park', 'Hyde Park'],
+  "Washington DC": ['Georgetown', 'Dupont Circle', 'Capitol Hill', 'Adams Morgan'],
 };
 
 const HotelViewsPage = () => {
@@ -104,11 +105,11 @@ const HotelViewsPage = () => {
         <div className="hotel-list">
           <h3>Hotels in {area}, {city}</h3>
           <ul>
-            {hotels.map((h, i) => (
-              <li key={i}>
-                Hotel #{h.hotel_id}: {h.total_capacity} total capacity
-              </li>
-            ))}
+          {hotels.map((h, i) => (
+            <li key={i}>
+              🏨 <strong>{h.hotel_chain_name}</strong> (Hotel ID: {h.hotel_id}) – 📍 {h.area} — 🛏️ Capacity: {h.total_capacity}
+            </li>
+          ))}
           </ul>
         </div>
       )}

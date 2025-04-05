@@ -29,6 +29,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/views" element={<ViewsPage />}/>
 
           {/* 🔐 Protected Routes */}
           <Route
@@ -36,14 +37,6 @@ function App() {
             element={
               <PrivateRoute>
                 <RoomSearch />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/views"
-            element={
-              <PrivateRoute>
-                <ViewsPage />
               </PrivateRoute>
             }
           />

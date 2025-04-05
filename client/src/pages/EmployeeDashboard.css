@@ -21,14 +21,14 @@
   }
   
   .booking-item {
-    background: #f0f8ff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 12px;
-    border: 1px solid #dceeff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid #dceeff;
+    background: #f3f9ff;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
   
   .booking-item p {
@@ -116,3 +116,21 @@
     background-color: #005fa3;
   }
   
+  .booking-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .checkin-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+  }

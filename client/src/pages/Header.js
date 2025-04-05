@@ -45,6 +45,15 @@ const Header = () => {
           ) : (
             <>
               <li>
+                <Link
+                  to={
+                    user?.role === 'employee' ? '/employee-dashboard' : '/search'
+                  }
+                >
+                  Dashboard
+                </Link>
+              </li>
+              <li>
                 <button onClick={handleLogout} className="logout-button">
                   Logout
                 </button>
@@ -56,7 +65,7 @@ const Header = () => {
                       ? '/employee-profile'
                       : '/customer-profile'
                   }
-                  title={user.name || 'Profile'}
+                  title={user?.name || 'Profile'}
                 >
                   <FaUser
                     className="login-icon"

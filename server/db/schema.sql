@@ -131,14 +131,14 @@ CREATE TABLE Renting (
 
 -- Transaction Table
 CREATE TABLE Hotel_Transaction (
-    Employee_ID INT NOT NULL REFERENCES Employee(Employee_ID),
-    Booking_ID INT,
-    Renting_ID INT,
+    Transaction_ID SERIAL PRIMARY KEY,
+    Employee_ID INT NULL REFERENCES Employee(Employee_ID),
+    Booking_ID INT NULL,
+    Renting_ID INT NULL,
     Transaction_Type VARCHAR(20) CHECK (Transaction_Type IN ('Booking', 'Renting')),
     Customer_ID INT NOT NULL,
     Hotel_ID INT NOT NULL,
     Room_Number INT NOT NULL,
-    PRIMARY KEY (Employee_ID, Booking_ID, Renting_ID),
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
     FOREIGN KEY (Booking_ID) REFERENCES Booking(Booking_ID) ON DELETE CASCADE,
     FOREIGN KEY (Renting_ID) REFERENCES Renting(Renting_ID) ON DELETE CASCADE,

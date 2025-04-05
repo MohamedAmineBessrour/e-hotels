@@ -22,7 +22,7 @@ exports.getHotelTotalCapacity = async (req, res) => {
   try {
     const { area } = req.query;
     const query = `
-      SELECT Hotel_ID, Area, Total_Capacity
+      SELECT Hotel_Chain_Name, Hotel_ID, Area, Total_Capacity
       FROM Hotel_Total_Capacity
       WHERE Area ILIKE $1
     `;

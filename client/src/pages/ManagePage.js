@@ -1,25 +1,16 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import './ManagePage.css';
 
-const hotelChains = [
-  { id: 1, name: 'LuxuryStay' },
-  { id: 2, name: 'BudgetInn' },
-  { id: 3, name: 'EcoHotels' },
-  { id: 4, name: 'UrbanRetreat' },
-  { id: 5, name: 'SunsetLodges' }
-];
-
 const ManagePage = () => {
-  const [hotelData, setHotelData] = useState({
-    hotelId: '',
-    hotelChainId: '',
-    address: '',
+  const [hotelIdToUpdate, setHotelIdToUpdate] = useState('');
+  const [hotelInfo, setHotelInfo] = useState({
     starRating: '',
+    phone: '',
+    email: ''
   });
 
-  const [hotelToDelete, setHotelToDelete] = useState('');
-
-  const [roomData, setRoomData] = useState({
+  const [insertRoomData, setInsertRoomData] = useState({
     hotelId: '',
     roomNumber: '',
     capacity: '',
@@ -29,87 +20,232 @@ const ManagePage = () => {
     isExtendable: false,
   });
 
-  const handleHotelChange = (e) => {
-    const { name, value } = e.target;
-    setHotelData({ ...hotelData, [name]: value });
-  };
+  const [roomSearch, setRoomSearch] = useState({ hotelId: '', roomNumber: '' });
+  const [roomUpdateInfo, setRoomUpdateInfo] = useState(null);
 
-  const handleRoomChange = (e) => {
+  const handleInsertRoomChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setRoomData({ ...roomData, [name]: type === 'checkbox' ? checked : value });
+    setInsertRoomData({ ...insertRoomData, [name]: type === 'checkbox' ? checked : value });
   };
 
-  const handleInsertHotel = (e) => {
-    e.preventDefault();
-    alert(`Insert hotel: ${JSON.stringify(hotelData)}`);
+  const handleRoomSearchChange = (e) => {
+    const { name, value } = e.target;
+    setRoomSearch({ ...roomSearch, [name]: value });
   };
 
-  const handleDeleteHotel = (e) => {
-    e.preventDefault();
-    alert(`Delete hotel with ID: ${hotelToDelete}`);
+  const handleRoomUpdateChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setRoomUpdateInfo({ ...roomUpdateInfo, [name]: type === 'checkbox' ? checked : value });
   };
 
-  const handleInsertRoom = (e) => {
+  const handleFindHotel = async (e) => {
     e.preventDefault();
-    alert(`Insert room: ${JSON.stringify(roomData)}`);
+    try {
+      const res = await axios.get(`http://localhost:5000/api/manage/hotel/${hotelIdToUpdate}`);
+      setHotelInfo(res.data);
+    } catch (err) {
+      alert("❌ Hotel not found.");
+      console.error("Error fetching hotel:", err.message);
+    }
   };
 
-  const handleDeleteRoom = (e) => {
+  const handleHotelInfoChange = (e) => {
+    const { name, value } = e.target;
+    setHotelInfo((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleUpdateHotel = async (e) => {
     e.preventDefault();
-    alert(`Delete Room ${roomData.roomNumber} from Hotel ${roomData.hotelId}`);
+    try {
+      await axios.put(`http://localhost:5000/api/manage/hotel/${hotelIdToUpdate}`, {
+        starRating: hotelInfo.starRating ? Number(hotelInfo.starRating) : null,
+        phone: hotelInfo.phone || null,
+        email: hotelInfo.email || null
+      });
+      alert("✅ Hotel info updated.");
+    } catch (err) {
+      console.error("❌ Update failed:", err.message);
+      alert("❌ Failed to update hotel info.");
+    }
+  };
+
+  const handleInsertRoom = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:5000/api/manage/room', {
+        hotelId: Number(insertRoomData.hotelId),
+        roomNumber: Number(insertRoomData.roomNumber),
+        capacity: Number(insertRoomData.capacity),
+        price: Number(insertRoomData.price),
+        viewType: insertRoomData.viewType,
+        availability: insertRoomData.availability,
+        isExtendable: insertRoomData.isExtendable
+      });
+      alert("✅ Room inserted successfully");
+    } catch (err) {
+      console.error("❌ Error inserting room:", err.message);
+      alert("❌ Failed to insert room.");
+    }
+  };
+
+  const handleFindRoom = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.get(`http://localhost:5000/api/manage/room/${roomSearch.hotelId}/${roomSearch.roomNumber}`);
+      setRoomUpdateInfo(res.data);
+    } catch (err) {
+      setRoomUpdateInfo(null);
+      alert("❌ Room not found.");
+      console.error("Error fetching room:", err.message);
+    }
+  };
+
+  const handleUpdateRoom = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.put(`http://localhost:5000/api/manage/room/${roomSearch.hotelId}/${roomSearch.roomNumber}`, {
+        capacity: Number(roomUpdateInfo.capacity),
+        price: Number(roomUpdateInfo.price),
+        availability: roomUpdateInfo.availability,
+        isExtendable: roomUpdateInfo.isExtendable
+      });
+      alert("✅ Room updated successfully");
+    } catch (err) {
+      console.error("❌ Error updating room:", err.message);
+      alert("❌ Failed to update room.");
+    }
+  };
+
+  const handleDeleteRoom = async () => {
+    try {
+      await axios.delete('http://localhost:5000/api/manage/room', {
+        data: {
+          hotelId: Number(roomSearch.hotelId),
+          roomNumber: Number(roomSearch.roomNumber)
+        }
+      });
+      setRoomUpdateInfo(null);
+      alert("🗑️ Room deleted successfully");
+    } catch (err) {
+      console.error("❌ Error deleting room:", err.message);
+      alert("❌ Failed to delete room.");
+    }
   };
 
   return (
     <div className="manage-container">
-      <h2>🏨 Manage Hotels</h2>
-      <form className="form-group" onSubmit={handleInsertHotel}>
-        <input type="number" name="hotelId" placeholder="Hotel ID" value={hotelData.hotelId} onChange={handleHotelChange} required />
-        <select
-          name="hotelChainId"
-          value={hotelData.hotelChainId}
-          onChange={handleHotelChange}
-          required
-        >
-          <option value="">Select Hotel Chain</option>
-          {hotelChains.map((chain) => (
-            <option key={chain.id} value={chain.id}>{chain.name}</option>
-          ))}
-        </select>
-        <input type="text" name="address" placeholder="Hotel Address" value={hotelData.address} onChange={handleHotelChange} required />
-        <input type="number" name="starRating" placeholder="Star Rating (1-5)" value={hotelData.starRating} onChange={handleHotelChange} required />
-        <button type="submit">Insert Hotel</button>
-      </form>
-
-      <form className="form-group" onSubmit={handleDeleteHotel}>
+      <h2>🏨 Update Hotel Info</h2>
+      <form className="form-group" onSubmit={handleFindHotel}>
         <input
           type="number"
-          name="hotelToDelete"
-          placeholder="Hotel ID to Delete"
-          value={hotelToDelete}
-          onChange={(e) => setHotelToDelete(e.target.value)}
+          placeholder="Enter Hotel ID"
+          value={hotelIdToUpdate}
+          onChange={(e) => setHotelIdToUpdate(e.target.value)}
           required
         />
-        <button type="submit" className="delete-btn">Delete Hotel</button>
+        <button type="submit">Find</button>
+      </form>
+
+      {hotelInfo && (
+        <form className="form-group" onSubmit={handleUpdateHotel}>
+          <input
+            type="number"
+            name="starRating"
+            placeholder="Star Rating (1-5)"
+            value={hotelInfo.starRating}
+            onChange={handleHotelInfoChange}
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={hotelInfo.phone}
+            onChange={handleHotelInfoChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={hotelInfo.email}
+            onChange={handleHotelInfoChange}
+          />
+          <button type="submit">Update Hotel Info</button>
+        </form>
+      )}
+
+      <hr />
+
+      <h2>➕ Insert New Room</h2>
+      <form className="form-group" onSubmit={handleInsertRoom}>
+        <input type="number" name="hotelId" placeholder="Hotel ID" value={insertRoomData.hotelId} onChange={handleInsertRoomChange} required />
+        <input type="number" name="roomNumber" placeholder="Room Number" value={insertRoomData.roomNumber} onChange={handleInsertRoomChange} required />
+        <input type="number" name="capacity" placeholder="Capacity" value={insertRoomData.capacity} onChange={handleInsertRoomChange} required />
+        <input type="number" name="price" placeholder="Price" value={insertRoomData.price} onChange={handleInsertRoomChange} required />
+        <input type="text" name="viewType" placeholder="View Type (e.g. Sea View)" value={insertRoomData.viewType} onChange={handleInsertRoomChange} />
+        <label>
+          <input type="checkbox" name="availability" checked={insertRoomData.availability} onChange={handleInsertRoomChange} /> Available
+        </label>
+        <label>
+          <input type="checkbox" name="isExtendable" checked={insertRoomData.isExtendable} onChange={handleInsertRoomChange} /> Extendable
+        </label>
+        <button type="submit">Insert Room</button>
       </form>
 
       <hr />
 
-      <h2>🛏️ Manage Rooms</h2>
-      <form className="form-group" onSubmit={handleInsertRoom}>
-        <input type="number" name="hotelId" placeholder="Hotel ID" value={roomData.hotelId} onChange={handleRoomChange} required />
-        <input type="number" name="roomNumber" placeholder="Room Number" value={roomData.roomNumber} onChange={handleRoomChange} required />
-        <input type="number" name="capacity" placeholder="Capacity" value={roomData.capacity} onChange={handleRoomChange} required />
-        <input type="number" name="price" placeholder="Price" value={roomData.price} onChange={handleRoomChange} required />
-        <input type="text" name="viewType" placeholder="View Type (e.g. Sea View)" value={roomData.viewType} onChange={handleRoomChange} />
-        <label>
-          <input type="checkbox" name="availability" checked={roomData.availability} onChange={handleRoomChange} /> Available
-        </label>
-        <label>
-          <input type="checkbox" name="isExtendable" checked={roomData.isExtendable} onChange={handleRoomChange} /> Extendable
-        </label>
-        <button type="submit">Insert Room</button>
-        <button onClick={handleDeleteRoom} className="delete-btn">Delete Room</button>
-      </form>
+      <h2>🔁 Update or Delete Existing Room</h2>
+      <div className="form-group" style={{ flexDirection: 'row', gap: '12px', flexWrap: 'wrap' }}>
+        <input
+          type="number"
+          name="hotelId"
+          placeholder="Hotel ID"
+          value={roomSearch.hotelId}
+          onChange={handleRoomSearchChange}
+          required
+          style={{ flex: 1 }}
+        />
+        <input
+          type="number"
+          name="roomNumber"
+          placeholder="Room Number"
+          value={roomSearch.roomNumber}
+          onChange={handleRoomSearchChange}
+          required
+          style={{ flex: 1 }}
+        />
+      </div>
+      <div className="form-group" style={{ flexDirection: 'row', gap: '12px' }}>
+        <button type="button" onClick={handleFindRoom} style={{ flex: 1 }}>Find Room</button>
+        <button type="button" onClick={handleDeleteRoom} style={{ flex: 1 }}>Delete Room</button>
+      </div>
+
+      {roomUpdateInfo && (
+        <form className="form-group" onSubmit={handleUpdateRoom}>
+          <input
+            type="number"
+            name="capacity"
+            placeholder="Capacity"
+            value={roomUpdateInfo.capacity}
+            onChange={handleRoomUpdateChange}
+          />
+          <input
+            type="number"
+            name="price"
+            placeholder="Price"
+            value={roomUpdateInfo.price}
+            onChange={handleRoomUpdateChange}
+          />
+          <label>
+            <input type="checkbox" name="availability" checked={roomUpdateInfo.availability} onChange={handleRoomUpdateChange} /> Available
+          </label>
+          <label>
+            <input type="checkbox" name="isExtendable" checked={roomUpdateInfo.isExtendable} onChange={handleRoomUpdateChange} /> Extendable
+          </label>
+          <div style={{ display: 'flex', gap: '12px' }}>
+            <button type="submit" style={{ flex: 1 }}>Update Room</button>
+          </div>
+        </form>
+      )}
     </div>
   );
 };
